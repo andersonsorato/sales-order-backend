@@ -1,0 +1,26 @@
+{
+  "name": "sales-order-backend",
+  "version": "1.0.0",
+  "description": "Backend for sales order management",
+  "main": "index.js",
+  "scripts": {    
+    "start": "cds-serve",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.7.3",
+    "@sap/hana-client": "^2.15.21",
+    "@sap/xsenv": "^3.3.0",
+    "@sap/cds": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "@sap/cds": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
