@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {    
     "start": "cds-serve",
-    "dev": "nodemon index.js"
+    "dev": "cds watch" 
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "@sap/cds": "^6.0.0"
+    "@sap/cds": "^6.0.0",
+    "@cap-js/cds-types": "^0.0.0",
+    "@cap-js/sqlite":"^1.0.0"
   },
   "engines": {
     "node": ">=18"
