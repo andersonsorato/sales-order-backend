@@ -1,12 +1,9 @@
 {
-    "[development}":{
-        "requeires":{
-            "db":{
-                "credentials":{
-                    "database":":memory:"
-                },
-                "kind":"sqlite"
-            }
-        }
+  "db": {
+    "kind": "sql",
+    "impl": "@cap-js/sqlite",
+    "credentials": {
+      "database": ":memory:"
     }
+  }
 }
