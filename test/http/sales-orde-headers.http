@@ -8,5 +8,5 @@ POST http://localhost:4004/odata/v4/sales-order/SalesOrdersHeaders
 Content-Type: application/json
 
 {
-  "id": "550e8400-e29b-41d4-a716-446655440000"
+  
 }
