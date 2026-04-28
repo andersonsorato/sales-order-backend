@@ -8,5 +8,36 @@ POST http://localhost:4004/odata/v4/sales-order/SalesOrdersHeaders
 Content-Type: application/json
 
 {
-  
+  "customers_id": "18998120-0628-4528-8b17-96152c0c5499",
+  "totalamount": 100.50
 }
+
+###
+GET http://localhost:4004/odata/v4/sales-order/customers
+Content-Type: application/json
+Accept: application/json
+
+
+###
+
+post http://localhost:4004/odata/v4/sales-order/customers
+Content-Type: application/json
+
+{    
+    "id"    : "18998120-0628-4528-8b17-96152c0c5499",
+    "firstName" : "teste Customer",
+    "email" : "test@example.com"    
+}
+
+
+### 
+put http://localhost:4004/odata/v4/sales-order/customers('id'='18998120-0628-4528-8b17-96152c0c5499'))
+Content-Type: application/json
+
+{    
+    
+    "firstName" : "teste Customer 1",
+    "email" : "test@example.com"    
+}
+
+

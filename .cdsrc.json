@@ -1,9 +1,10 @@
 {
   "db": {
-    "kind": "sql",
+    "kind": "sqlite",
     "impl": "@cap-js/sqlite",
     "credentials": {
-      "database": ":memory:"
+      "database": ":db.sqlite:"
     }
   }
+    
 }

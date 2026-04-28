@@ -1,5 +1,7 @@
 using { managed } from '@sap/cds/common';
+
 namespace sales;
+
 entity SalesOrderHeaders: managed {
     key id : UUID;  
     customers : Association to customers;
@@ -7,8 +9,7 @@ entity SalesOrderHeaders: managed {
     items : composition of many SalesOrderItems on items.hearder = $self;
 }
 
-entity
-SalesOrderItems: managed {
+entity SalesOrderItems: managed {
     key id : UUID;      
     hearder : Association to SalesOrderHeaders;  
     products : Association to products;
