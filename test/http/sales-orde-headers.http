@@ -31,7 +31,7 @@ Content-Type: application/json
 
 
 ### 
-put http://localhost:4004/odata/v4/sales-order/customers('id'='18998120-0628-4528-8b17-96152c0c5499'))
+put  http://localhost:4004/odata/v4/sales-order/customers(id='18998120-0628-4528-8b17-96152c0c54cb')
 Content-Type: application/json
 
 {    
