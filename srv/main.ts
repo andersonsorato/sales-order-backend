@@ -1,6 +1,9 @@
-import cds, { Service, Request, SELECT } from "@sap/cds";
-import {customer, customers, SalesOrderItem} from "@cds-models/sales";
+import * as cds from "@sap/cds";
+import { Service, Request } from "@sap/cds";
+import {customer, customers, product, SalesOrderItem} from "@cds-models/sales";
 import { ResultSet } from "@sap/hana-client";
+
+const { SELECT } = cds.ql;
 
 export default (service: Service) => {
     service.after('READ', "customers", (results: customers) => {
@@ -10,10 +13,12 @@ export default (service: Service) => {
             }});
      console.log(results);        
 });
-service.before('CREATE', "salesOrdersHeader", async (request: Request) => {
+
+service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     const params = request.data; 
-    if (!params.customers_id) {
-        return request.reject(404, "Missing required field: customers_id");
+    console.log(params);
+    if (!params.customer_id) {
+        return request.reject(404, "Missing required field: customer_id");
     }
     if (!params.items || params.items.length === 0) {
         return request.reject(404, "Sales order must contain at least one item");
@@ -23,10 +28,14 @@ service.before('CREATE', "salesOrdersHeader", async (request: Request) => {
     if (!customer) {
         return request.reject(404, "custumer not found with ID: " + params.customers_id);
     }
-    const products = params.items.map((item: SalesOrderItem) => item.products_id);
-    const productQuery = SELECT.from('sales.products').where({ ID: products });
-    
+    const products: string[] = params.items.map((item: SalesOrderItem) => item.products_id);
+    const productQuery = SELECT.from('sales.products').where({ ID: { in: products } });
+    const productResults = await cds.run(productQuery);
+    const dbPrducts = productResults.map((product: product) => productResults.id);
+    if (!products.every((products => dbPrducts.includes(products)))) {
+        return request.reject(404, "One or more products not found with IDs: " + products.join(", "));
+    }
     console.log(JSON.stringify(productQuery));
 });
-
+console.log("Hello world2");
 }

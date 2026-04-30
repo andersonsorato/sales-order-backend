@@ -8,13 +8,12 @@ POST http://localhost:4004/odata/v4/sales-order/SalesOrdersHeaders
 Content-Type: application/json
 
 {
-  "id": "18998120-0628-4528-8b17-96152c0c5499",
-  "customers_id": "18998120-0628-4528-8b17-96152c0c5499",
+  
+  "customers_id": "18998120-0628-4528-8b17-96152c0c54cb",
   "totalamount": 100.50,
   "items": [ 
                 { 
-                  "id": "18998120-0628-4528-8b17-96152c0c5493",
-                  "salesOrderHeader_id": "18998120-0628-4528-8b17-96152c0c5499", 
+                                  
                   "products_id": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 
                   "quantity": 2, 
                   "price": 50.25 
