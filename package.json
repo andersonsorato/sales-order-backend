@@ -4,8 +4,8 @@
   "description": "Backend for sales order management",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=db cds-serve",
-    "dev": "DEBUG=db cds watch"
+    "start": "cds-serve",
+    "dev": "cds watch"
   },
   "dependencies": {
     "@sap/cds": "^9.9.0",

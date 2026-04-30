@@ -1,8 +1,6 @@
 import cds, { Service, Request, SELECT } from "@sap/cds";
-import {customer, customers} from "@cds-models/sales";
+import {customer, customers, SalesOrderItem} from "@cds-models/sales";
 import { ResultSet } from "@sap/hana-client";
-import console from "console";
-import { setDefaultAutoSelectFamily } from "net";
 
 export default (service: Service) => {
     service.after('READ', "customers", (results: customers) => {
@@ -25,7 +23,10 @@ service.before('CREATE', "salesOrdersHeader", async (request: Request) => {
     if (!customer) {
         return request.reject(404, "custumer not found with ID: " + params.customers_id);
     }
+    const products = params.items.map((item: SalesOrderItem) => item.products_id);
+    const productQuery = SELECT.from('sales.products').where({ ID: products });
     
-    console.log(customer);
+    console.log(JSON.stringify(productQuery));
 });
+
 }

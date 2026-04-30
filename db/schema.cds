@@ -28,4 +28,5 @@ entity products: managed {
     key id : UUID;  
     name : String;  
     price : Decimal(15,2);  
+    stock : Integer;
 }
