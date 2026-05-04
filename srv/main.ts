@@ -2,10 +2,25 @@ import * as cds from "@sap/cds";
 import { Service, Request } from "@sap/cds";
 import {customer, customers, product, SalesOrderItem} from "@cds-models/sales";
 import { ResultSet } from "@sap/hana-client";
+import { clear } from "node:console";
 
 const { SELECT } = cds.ql;
 
 export default (service: Service) => {
+
+service.before('READ', '*', (request: Request) => {
+    console.log("ates de ler");
+    if (!request.user.is('read only'))    
+    {return request.reject(403, "Unauthorized access - read only role required");}
+}
+);
+
+service.before(['WRITE',  'DELETE'], '*', (request: Request) => {
+    if (!request.user.is('admin'))    
+    {return request.reject(403, "Unauthorized access - admin role required");}
+}
+);
+
     service.after('READ', "customers", (results: customers) => {
         results.forEach((customer: customer) => {
             if (!customer.email?.includes('@')) {
@@ -13,6 +28,7 @@ export default (service: Service) => {
             }});
      console.log(results);        
 });
+
 
 service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     const params = request.data; 
@@ -37,5 +53,5 @@ service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     }
     console.log(JSON.stringify(productQuery));
 });
-console.log("Hello world2");
+
 }

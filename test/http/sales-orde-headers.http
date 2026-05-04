@@ -6,6 +6,7 @@ Accept: application/json
 
 POST http://localhost:4004/odata/v4/sales-order/SalesOrdersHeaders
 Content-Type: application/json
+Authorization: Basic psiu:cuka
 
 {     
   "customers_id": "40586447-87ef-448a-98b0-e5fc15ed85b8",
