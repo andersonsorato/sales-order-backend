@@ -18,6 +18,14 @@ entity SalesOrderItems: managed {
     price : Decimal(15,2);  
 }
 
+entity SalesOrderLog: managed {
+    key id : UUID;      
+    header : association to SalesOrderHeaders; 
+    userData: LargeString;
+    orderData: LargeString;  
+    timestamp : Timestamp;
+}
+
 entity customers: managed {
     key id : UUID;  
     firstName : String;  
