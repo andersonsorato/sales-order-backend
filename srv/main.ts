@@ -1,8 +1,9 @@
 import * as cds from "@sap/cds";
 import { Service, Request } from "@sap/cds";
-import {customer, customers, product, SalesOrderHeader, SalesOrderHeaders, SalesOrderItem, SalesOrderItems} from "@cds-models/sales";
+import {customer, customers, product, products, SalesOrderHeader, SalesOrderHeaders, SalesOrderItem, SalesOrderItems} from "@cds-models/sales";
 import { ResultSet } from "@sap/hana-client";
-import { clear } from "node:console";
+import { clear, log } from "node:console";
+import { json } from "node:stream/consumers";
 
 const { SELECT } = cds.ql;
 
@@ -69,29 +70,34 @@ service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     }
     request.data.totalamount = totalamount;
 });
-service.after('CREATE', 'SalesOrderHeaders', async (results: SalesOrderHeaders) => {
-  const headersArray = Array.isArray(results) ? results : [results] as SalesOrderHeader[];
 
+service.after('CREATE', 'SalesOrdersHeaders', async (results: SalesOrderHeaders, request: Request) => {  
+  const headersArray = Array.isArray(results) ? results : [results] as SalesOrderHeader[];
   for (const header of headersArray) {
     const items = header.items as SalesOrderItems;
     const productsData = items.map(item => ({
       id: item.products_id as string,
       quantity: item.quantity as number
     }));
-
     const productsIds = productsData.map(productData => productData.id);
-    const productsQuery = SELECT.from('sales.Products').where({ id: productsIds });
-    const products: product[] = await cds.run(productsQuery);
-
+    const productsQuery = SELECT.from('sales.products').where({ id: productsIds });
+    const productss: product[] = await cds.run(productsQuery);
     for (const productData of productsData) {
-      const foundProduct = products.find(product => product.id === productData.id) as product;
-      foundProduct.stock = (foundProduct.stock as number) - productData.quantity;
-
-      await cds.update('sales.Products')
+      const foundProduct = productss.find(products => products.id === productData.id) as product;
+      foundProduct.stock = (foundProduct.stock as number) - productData.quantity;     
+      await cds.update('sales.products')
         .where({ id: foundProduct.id })
-        .with({ stock: foundProduct.stock });
-    }
-  }
+        .with({ stock: foundProduct.stock });       
+        console.log(`Updated stock for product ID ${foundProduct.id}: new stock is ${foundProduct.stock}`);
+    }   
+   const headerAsString = JSON.stringify(header);
+  const userAsString = JSON.stringify(request.user); 
+  const logs = [{header_id: header.id, userData: userAsString, orderData: headerAsString}];
+  console.log('LOG JSON:', JSON.stringify(logs, null, 2))
+  console.log('LOG OBJECT:', logs);
+  console.log('LOG JSON:', JSON.stringify(logs, null, 2))
+  await cds.create('sales.SalesOrderLog').entries({logs})
+  }  
 });
 
 }

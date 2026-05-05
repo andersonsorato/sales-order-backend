@@ -22,8 +22,7 @@ entity SalesOrderLog: managed {
     key id : UUID;      
     header : association to SalesOrderHeaders; 
     userData: LargeString;
-    orderData: LargeString;  
-    timestamp : Timestamp;
+    orderData: LargeString;     
 }
 
 entity customers: managed {

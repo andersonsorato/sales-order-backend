@@ -13,7 +13,7 @@ Authorization: Basic admin:cuka
   "totalamount": 100.50,
   "items": [ 
                 {                                   
-                  "products_id": "5584754a-a6a1-445a-9599-45e739106fac", 
+                  "products_id": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 
                   "quantity": 2, 
                   "price": 50.25 
                 } 
@@ -24,6 +24,13 @@ Authorization: Basic admin:cuka
 GET http://localhost:4004/odata/v4/sales-order/customers
 Content-Type: application/json
 Accept: application/json
+
+###
+GET http://localhost:4004/odata/v4/sales-order/SalesOrderLog
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic admin:cuka
+
 
 
 ###
