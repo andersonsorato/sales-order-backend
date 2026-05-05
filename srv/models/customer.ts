@@ -8,6 +8,12 @@ type CustomerProps = {
 export class CustomerModel {
     constructor(private props: CustomerProps){}
 
+    public static create(props: CustomerProps): CustomerModel {
+        const customer = new CustomerModel(props);
+        customer.setDefaultDomain();
+        return customer;
+    }
+
     public get id(){
         return this.props.id;
     }
@@ -21,8 +27,19 @@ export class CustomerModel {
         return this.props.email;
     }
 
-    public setDefaultDomain(){
+    public setDefaultDomain(): CustomerModel{
         if (!this.props.email.includes('@')){
             this.props.email = `${this.props.email}@defaultdomain.com`;
-    }}
+        }
+        return this;
+    }
+
+    public toObject(): CustomerProps {
+        return {
+            id: this.props.id,
+            firstName: this.props.firstName,
+            lastName: this.props.lastName,
+            email: this.props.email
+        }
+    }
 }

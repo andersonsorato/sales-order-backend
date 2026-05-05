@@ -4,6 +4,9 @@ import {customer, customers, product, products, SalesOrderHeader, SalesOrderHead
 import { ResultSet } from "@sap/hana-client";
 import { clear, log } from "node:console";
 import { json } from "node:stream/consumers";
+import { CustomerServiceImpl } from "./services/customer/implementation";
+import { customerController } from "./factories/controllers/customers";
+import { FullRequestParams } from "./protocols";
 
 const { SELECT } = cds.ql;
 
@@ -24,12 +27,14 @@ service.before('READ', '*', (request: Request) => {
 }
 );
 
-    service.after('READ', "customers", (results: customers) => {
-        results.forEach((customer: customer) => {
-            if (!customer.email?.includes('@')) {
-                customer.email = `${customer.email}@gmail.com`;
-            }});
-     console.log(results);        
+    service.after('READ', "customers", (customerList: customers, request) => {
+      //request.results = customerController.afterRead(customerList);
+      (request as unknown as FullRequestParams<customers>).result = customerController.afterRead(customerList);
+        //results.forEach((customer: customer) => {
+           //if (!customer.email?.includes('@')) {
+             //   customer.email = `${customer.email}@gmail.com`;
+           //}});
+     //console.log(results);        
 });
 
 
