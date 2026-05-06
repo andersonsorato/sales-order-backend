@@ -6,6 +6,7 @@ import { clear, log } from "node:console";
 import { json } from "node:stream/consumers";
 import { CustomerServiceImpl } from "./services/customer/implementation";
 import { customerController } from "./factories/controllers/customers";
+import { salesOrderHeaderController } from "./factories/controllers/sales-order-header";
 import { FullRequestParams } from "./protocols";
 
 const { SELECT } = cds.ql;
@@ -39,8 +40,12 @@ service.before('READ', '*', (request: Request) => {
 
 
 service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
-    const params = request.data; 
-    const items: SalesOrderItems = params.items as SalesOrderItems;
+  
+    const result = await salesOrderHeaderController.beforeCreate(request.data);
+    if (result.hasError) {
+        return request.reject(400, result.error?.message || "Error processing sales order header");
+    }
+   /*  const items: SalesOrderItems = params.items as SalesOrderItems;
     console.log(params);
     if (!params.customers_id) {
         return request.reject(404, "Missing required field: customers_id");
@@ -56,7 +61,7 @@ service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     const products: string[] = params.items.map((item: SalesOrderItem) => item.products_id);
     const productQuery = SELECT.from('sales.products').where({ id: { in: products } });
     const productResults = await cds.run(productQuery);
-    for(const item of params.items){
+    for(const item of params.items){ 
         const dbPrducts = productResults.find((product: product) => product.id === item.products_id);
         if (!dbPrducts) {
             return request.reject(404, "One or more products not found with IDs: " + products.join(", "));
@@ -72,8 +77,8 @@ service.before('CREATE', "SalesOrdersHeaders", async (request: Request) => {
     });
     if (totalamount > 30000 ) {
       totalamount = totalamount * 0.9; // Apply 10% discount  
-    }
-    request.data.totalamount = totalamount;
+    }*/
+    request.data.totalamount = result.totalAmount;
 });
 
 service.after('CREATE', 'SalesOrdersHeaders', async (results: SalesOrderHeaders, request: Request) => {  
