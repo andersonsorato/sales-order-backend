@@ -6,7 +6,7 @@ import { products } from "@cds-models/sales";
 const { SELECT } = cds.ql;
 
 export class ProductRepositoryImpl implements ProductRepository {
-    public async findByIds(ids: ProductProps["id"][]): Promise<ProductModel | null> {
+    public async findByIds(ids: ProductProps["id"][]): Promise<ProductModel[] | null> {
         // Implement the logic to fetch products by their IDs from the database
         // This is a placeholder implementation and should be replaced with actual database queries
         const productQuery = SELECT.from('sales.products').where({ id: ids });
@@ -30,4 +30,13 @@ export class ProductRepositoryImpl implements ProductRepository {
         // Replace this with actual database access code
         return [];
     }
-}   
+    public async updateStock(product: ProductModel): Promise<void> {
+        // Implement the logic to update the stock of a product in the database
+        // This is a placeholder implementation and should be replaced with actual database queries
+        await cds.update('sales.products')
+            .set({ stock: product.stock })
+            .where({ id: product.id });  
+     }       
+    }
+
+   

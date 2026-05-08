@@ -89,4 +89,13 @@ public calculateDiscount(): number{
   }
   return 0;
 }
+public getProductsData(): { id: string; quantity: number }[] {
+  return this.items.map(item => ({
+    id: item.productId,
+    quantity: item.quantity
+  }));
+}
+public toStringfieObject(): string{
+  return JSON.stringify(this.props);
+}
 }
