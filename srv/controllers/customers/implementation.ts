@@ -7,4 +7,4 @@ export class CustomerControllerImpl implements CustomerController {
     public afterRead(customerList: customers): customers {
         return this.service.afterRead(customerList);
     }
-}   
+}

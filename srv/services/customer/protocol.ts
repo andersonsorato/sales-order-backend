@@ -1,5 +1,5 @@
 import { customers } from '@cds-models/sales';
 
-export interface CustomerService{
+export interface CustomerService {
     afterRead(customerList: customers): customers;
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch"
+    "dev": "cds watch",
+    "lint": "eslint ./srv"
   },
   "dependencies": {
     "@sap/cds": "^9.9.0",

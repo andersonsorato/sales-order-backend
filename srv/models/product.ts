@@ -3,7 +3,7 @@ export type ProductProps = {
     name: string;
     price: number;
     stock: number;
-}
+};
 
 export type SellValidationResult = {
     hasError: boolean;
@@ -11,22 +11,22 @@ export type SellValidationResult = {
 };
 
 export class ProductModel {
-    constructor(private props: ProductProps){}
+    constructor(private props: ProductProps) {}
 
     public static whit(props: ProductProps): ProductModel {
         return new ProductModel(props);
     }
 
-    public get id(){
+    public get id() {
         return this.props.id;
     }
-    public get name(){
+    public get name() {
         return this.props.name;
     }
-    public get price(){
+    public get price() {
         return this.props.price;
     }
-    public get stock(){
+    public get stock() {
         return this.props.stock;
     }
 
@@ -38,12 +38,12 @@ export class ProductModel {
         if (this.stock < amount) {
             return {
                 hasError: true,
-                error: new Error(`Saldo insulficiente no estoque ${this.name}. Available stock: ${this.stock}, requested: ${amount}`)
+                error: new Error(
+                    `Saldo insulficiente no estoque ${this.name}. Available stock: ${this.stock}, requested: ${amount}`,
+                ),
             };
         }
         this.stock -= amount;
         return { hasError: false };
-    };
+    }
 }
-    
-

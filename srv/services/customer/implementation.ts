@@ -9,14 +9,12 @@ export class CustomerServiceImpl implements CustomerService {
                 id: customer.id,
                 firstName: customer.firstName,
                 lastName: customer.lastName,
-                email: customer.email
+                email: customer.email,
             });
             console.log(customerR);
-            return customerR
-                .setDefaultDomain()
-                .toObject();
-        }); 
-        console.log(customersS);  
-        return customersS;    
+            return customerR.setDefaultDomain().toObject();
+        });
+        console.log(customersS);
+        return customersS;
     }
 }

@@ -9,14 +9,14 @@ export class CustomerRepositoryImpl implements CustomerRepository {
     public async findById(id: CustomerProps['id']): Promise<CustomerModel> | null {
         const customerQuery = SELECT.one.from('sales.customers').where({ id });
         const dbCustomer = await cds.run(customerQuery);
-        if (!dbCustomer) { 
-            return null; 
-        }          
+        if (!dbCustomer) {
+            return null;
+        }
         return CustomerModel.whit({
             id: dbCustomer.id,
             firstName: dbCustomer.firstName,
             lastName: dbCustomer.lastName,
-            email: dbCustomer.email
-        });        
+            email: dbCustomer.email,
+        });
     }
 }
