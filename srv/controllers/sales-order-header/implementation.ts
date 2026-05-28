@@ -1,7 +1,7 @@
-import { SalesOrderHeaderService } from "srv/services/sales-order-header/protocols";
-import { CreationPayloadValidationResult, SalesOrderHeaderController } from "./protocols";
-import { SalesOrderHeader, SalesOrderHeaders } from "@cds-models/sales";
-import { User } from "@sap/cds";
+import { SalesOrderHeaderService } from 'srv/services/sales-order-header/protocols';
+import { User } from '@sap/cds';
+import { CreationPayloadValidationResult, SalesOrderHeaderController } from './protocols';
+import { SalesOrderHeader, SalesOrderHeaders } from '@cds-models/sales';
 
 export  class SalesOrderHeaderControllerImpl implements SalesOrderHeaderController {
     constructor(
@@ -15,7 +15,7 @@ export  class SalesOrderHeaderControllerImpl implements SalesOrderHeaderControll
             return {
                 hasError: true,
                 error: error as Error
-            }
+            };
         }
     }
     public async afterCreate(params: SalesOrderHeaders, loggedUser: User): Promise<void> {

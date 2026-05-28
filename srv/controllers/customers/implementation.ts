@@ -1,6 +1,6 @@
-import { customers } from "@cds-models/sales";
-import { CustomerController } from "./protocols";
-import { CustomerService } from "srv/services/customer/protocol";
+import { CustomerController } from './protocols';
+import { CustomerService } from 'srv/services/customer/protocol';
+import { customers } from '@cds-models/sales';
 
 export class CustomerControllerImpl implements CustomerController {
     constructor(private readonly service: CustomerService) {}

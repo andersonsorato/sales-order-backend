@@ -1,6 +1,6 @@
-import { User } from "@sap/cds";
-import { SalesOrderHeader, SalesOrderHeaders } from "@cds-models/sales";
-import { SalesOrderHeaderService } from "srv/services/sales-order-header/protocols";
+import { User } from '@sap/cds';
+import { SalesOrderHeader, SalesOrderHeaders } from '@cds-models/sales';
+import { } from 'srv/services/sales-order-header/protocols';
 
 
 export type CreationPayloadValidationResult = {

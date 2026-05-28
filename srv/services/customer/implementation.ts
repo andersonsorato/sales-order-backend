@@ -1,9 +1,9 @@
-import { customers } from "@cds-models/sales"
-import { CustomerService } from "./protocol";
-import { CustomerModel } from "srv/models/customer";
+import { CustomerModel } from 'srv/models/customer';
+import { CustomerService } from './protocol';
+import { customers } from '@cds-models/sales';
 
 export class CustomerServiceImpl implements CustomerService {
-   public afterRead(customerList: customers): customers {
+    public afterRead(customerList: customers): customers {
         const customersS = customerList.map((customer) => {
             const customerR = CustomerModel.whit({
                 id: customer.id,
@@ -11,10 +11,10 @@ export class CustomerServiceImpl implements CustomerService {
                 lastName: customer.lastName,
                 email: customer.email
             });
-            console.log(customerR)
+            console.log(customerR);
             return customerR
-            .setDefaultDomain()
-            .toObject();
+                .setDefaultDomain()
+                .toObject();
         }); 
         console.log(customersS);  
         return customersS;    

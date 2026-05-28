@@ -43,7 +43,7 @@ export class ProductModel {
         }
         this.stock -= amount;
         return { hasError: false };
-            };
-        }
+    };
+}
     
 

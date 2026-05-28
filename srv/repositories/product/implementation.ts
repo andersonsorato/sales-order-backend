@@ -1,18 +1,20 @@
-import { ProductModel, ProductProps } from "srv/models/product";
-import { ProductRepository } from "./protocols";
-import cds from "@sap/cds";
-import { products } from "@cds-models/sales";
+import { ProductRepository } from './protocols';
+import { ProductModel, ProductProps } from 'srv/models/product';
+
+import cds from '@sap/cds';
+
+import {  } from '@cds-models/sales';
 
 const { SELECT } = cds.ql;
 
 export class ProductRepositoryImpl implements ProductRepository {
-    public async findByIds(ids: ProductProps["id"][]): Promise<ProductModel[] | null> {
+    public async findByIds(ids: ProductProps['id'][]): Promise<ProductModel[] | null> {
         // Implement the logic to fetch products by their IDs from the database
         // This is a placeholder implementation and should be replaced with actual database queries
         const productQuery = SELECT.from('sales.products').where({ id: ids });
         const dbProducts = await cds.run(productQuery); 
 
-       // const products = await this.fetchProductsFromDatabase(ids);
+        // const products = await this.fetchProductsFromDatabase(ids);
         if (!dbProducts || dbProducts.length === 0) {
             return null;
         }
@@ -25,7 +27,7 @@ export class ProductRepositoryImpl implements ProductRepository {
         }));
     }
 
-    private async fetchProductsFromDatabase(ids: ProductProps["id"][]): Promise<any[]> {
+    private async fetchProductsFromDatabase( ): Promise<unknown[]> {
         // Placeholder for database fetching logic
         // Replace this with actual database access code
         return [];
@@ -36,7 +38,7 @@ export class ProductRepositoryImpl implements ProductRepository {
         await cds.update('sales.products')
             .set({ stock: product.stock })
             .where({ id: product.id });  
-     }       
-    }
+    }       
+}
 
    

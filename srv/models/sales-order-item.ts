@@ -1,4 +1,4 @@
-import { ProductModel } from "./product";
+import { ProductModel } from './product';
 
 export type SalesOrdemItemProps = {
   id: string; 
@@ -20,45 +20,45 @@ type CreationPayloadValidationResult = {
 };
 
 export class SalesOrderItemModel {
-  private props: SalesOrdemItemProps;
+    private props: SalesOrdemItemProps;
 
-  constructor(props: SalesOrdemItemProps) { this.props = props; }
+    constructor(props: SalesOrdemItemProps) { this.props = props; }
 
-  public static create(props: SalesOrderOmitProps): SalesOrderItemModel {
-    return new SalesOrderItemModel({
-      ...props,
-      id: crypto.randomUUID() // Generate a unique ID for the sales order item
-    });
-  }
+    public static create(props: SalesOrderOmitProps): SalesOrderItemModel {
+        return new SalesOrderItemModel({
+            ...props,
+            id: crypto.randomUUID() // Generate a unique ID for the sales order item
+        });
+    }
 
-  get id() {
-    return this.props.id;
-  }                 
+    get id() {
+        return this.props.id;
+    }                 
 
     get productId() {
-    return this.props.productId;
+        return this.props.productId;
     }
 
     get quantity() {
-    return this.props.quantity;
+        return this.props.quantity;
     }
 
     get price() {
-    return this.props.price;
+        return this.props.price;
     }
 
     get  products() {
-    return this.props.products;
+        return this.props.products;
     }
 
     public validateCreationPayload(params: CreationPayload): CreationPayloadValidationResult {
-    const product = this.props.products.find(product => product.id === params.productId);
-    if (!product) {
-        return { isValid: true, errors: new Error("Product not found") };      
+        const product = this.props.products.find(product => product.id === params.productId);
+        if (!product) {
+            return { isValid: true, errors: new Error('Product not found') };      
+        }
+        if (product.stock < 1) {
+            return { isValid: true, errors: new Error('Product is out of stock') };
+        }
+        return { isValid: false };
     }
-    if (product.stock < 1) {
-        return { isValid: true, errors: new Error("Product is out of stock") };
-    }
-    return { isValid: false };
-}
 }

@@ -1,6 +1,6 @@
-const cds = require('@sap/cds');
+import cds from '@sap/cds';
 
-module.exports = cds.service.impl(async (srv) => {
+export default cds.service.impl(async (srv) => {
   // Mock data store
   const salesOrdersHeaders = [
     {
@@ -11,7 +11,7 @@ module.exports = cds.service.impl(async (srv) => {
   ];
 
   // READ all records
-  srv.on('READ', 'SalesOrdersHeaders', (req) => {
+  srv.on('READ', 'SalesOrdersHeaders', ( ) => {
     return salesOrdersHeaders;
   });
 
