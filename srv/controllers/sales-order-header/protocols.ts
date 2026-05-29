@@ -1,6 +1,8 @@
 import { User } from '@sap/cds';
+
 import { SalesOrderHeader, SalesOrderHeaders } from '@cds-models/sales';
-import {} from 'srv/services/sales-order-header/protocols';
+
+import {} from '@/services/sales-order-header/protocols';
 
 export type CreationPayloadValidationResult = {
     hasError: boolean;

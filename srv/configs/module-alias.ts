@@ -1,4 +1,6 @@
-import { join } from 'path';
-import * as moduleAlias from 'module-alias';
+import { addAlias } from 'module-alias';
+import path from 'path';
 
-moduleAlias.addAlias('@', join(__dirname, '..'));
+const src = path.resolve(__dirname, '..'); // aponta para /src
+addAlias('@', src);
+export {};

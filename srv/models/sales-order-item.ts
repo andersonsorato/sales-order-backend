@@ -1,4 +1,4 @@
-import { ProductModel } from './product';
+import { ProductModel } from '@/models/product';
 
 export type SalesOrdemItemProps = {
     id: string;

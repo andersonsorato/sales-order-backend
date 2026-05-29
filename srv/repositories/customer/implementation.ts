@@ -1,7 +1,8 @@
-import { CustomerRepository } from './protocols';
-import { CustomerModel, CustomerProps } from 'srv/models/customer';
+import { CustomerModel, CustomerProps } from '@/models/customer';
 
 import cds from '@sap/cds';
+
+import { CustomerRepository } from '@/repositories/customer/protocols';
 
 const { SELECT } = cds.ql;
 

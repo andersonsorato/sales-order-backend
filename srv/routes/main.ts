@@ -1,6 +1,9 @@
-import { FullRequestParams } from './protocols';
-import { customerController } from './factories/controllers/customers';
-import { salesOrderHeaderController } from './factories/controllers/sales-order-header';
+import '../configs/module-alias';
+
+import { FullRequestParams } from '@/routes/protocols';
+
+import { customerController } from '@/factories/controllers/customers';
+import { salesOrderHeaderController } from '@/factories/controllers/sales-order-header';
 import { Request, Service } from '@sap/cds';
 import { SalesOrderHeaders, customers } from '@cds-models/sales';
 import {} from 'node:console';
