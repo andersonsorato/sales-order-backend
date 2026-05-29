@@ -11,9 +11,12 @@
   "dependencies": {
     "@sap/cds": "^9.9.0",
     "@sap/hana-client": "^2.15.21",
+    "alias": "^0.0.5",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "module": "^2.0.0",
+    "module-alias": "^2.3.4",
     "mongoose": "^7.7.3"
   },
   "devDependencies": {
@@ -23,6 +26,7 @@
     "@eslint/js": "^10.0.1",
     "@types/axios": "^0.14.4",
     "@types/node": "^25.6.0",
+    "chai": "^6.2.2",
     "eslint": "^10.4.0",
     "eslint-plugin-prettier": "^5.5.6",
     "globals": "^17.6.0",
