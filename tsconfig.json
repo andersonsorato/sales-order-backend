@@ -5,8 +5,10 @@
     "module": "Node16",
     "moduleResolution": "node16",
     "lib": ["ES2022"],
-    "noEmit": true,
-    
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": ".",
+
     "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
