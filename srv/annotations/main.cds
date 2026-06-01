@@ -82,10 +82,29 @@ annotate SalesOrderService.SalesOrdersHeaders with @(
         ],
         Facets: [
             {
+                $Type: 'UI.CollectionFacet',
+                ID: 'salesOrderData',
+                Label: 'Informacao do Cabeçalho do Pedido',
+                Facets:[
+                     {
+                        ID: 'header',
+                        $Type: 'UI.ReferenceFacet',
+                        Target: '@UI.FieldGroup#General'
+                    }
+                ]
+            },
+            {
                 $Type: 'UI.ReferenceFacet',
-                Label: 'General',
-                Target: '@UI.FieldGroup#General'
-            }
+                ID: 'costumerData',
+                Label: 'Informacao do Cliente',
+                Target: 'customers/@UI.FieldGroup#CustomerData'
+            },
+            {
+                $Type: 'UI.ReferenceFacet',
+                ID: 'ItemsData',
+                Label: 'Items do Pedido',
+                Target: 'items/@UI.LineItem'
+            },
         ],
         FieldGroup#General: {
             Data: [
@@ -100,7 +119,7 @@ annotate SalesOrderService.SalesOrdersHeaders with @(
                     Value: totalamount
                 }
             ]
-        }
+        },
     }   
 )
  {
@@ -156,4 +175,84 @@ annotate SalesOrderService.SalesOrdersHeaders with @(
     annotate SalesOrderService.SalesOrderStatuses with {
         id @Common.Text: description @Common.TextArrangement: #TextOnly;
     };
+
+    annotate SalesOrderService.customers with @(
+        UI: {
+            FieldGroup#CustomerData : {
+                $Type : 'UI.FieldGroupType',
+                Data : [
+                    {
+                        $Type: 'UI.DataField',
+                        Label: 'Cliente',
+                        Value: id
+                    },
+                    {
+                        $Type: 'UI.DataField',
+                        Label: 'Nome',
+                        Value: firstName
+                    },                   
+                    {
+                        $Type: 'UI.DataField',
+                        Label: 'E-mail',
+                        Value: email
+                    }
+                ]                
+            },
+        }
+    ){
+        id @title: 'Customer ID';
+        firstName @title: 'Name';        
+         email @title: 'E-mail';
+};
+
+annotate SalesOrderService.SalesOrderItems with @(
+        UI: {
+            LineItem: [
+                {
+                    $Type: 'UI.DataField',
+                    Value: id,
+                    ![@HTML5.CssDefaults] : {
+                    $Type : 'HTML5.CssDefaultsType',
+                    width : '18%', 
+                },
+                },        
+                {
+                    $Type: 'UI.DataField',                
+                    Value: price,  
+                    ![@HTML5.CssDefaults] : {
+                    $Type : 'HTML5.CssDefaultsType',
+                    width : '10%', 
+                },                  
+                },
+             {
+                    $Type: 'UI.DataField',
+                    Label: 'Produto',
+                    Value: product, 
+                    ![@HTML5.CssDefaults] : {
+                    $Type : 'HTML5.CssDefaultsType',
+                    width : '10%', 
+                },                   
+                },
+                 {
+                    $Type: 'UI.DataField',
+                    Label: 'Quantidade',
+                    Value: quantity, 
+                    ![@HTML5.CssDefaults] : {
+                    $Type : 'HTML5.CssDefaultsType',
+                    width : '9%', 
+                },                   
+                },                
+            ],
+        }
+)
+{
+    id @title: 'Item ID';
+    price @title: 'Preço';    
+    quantity @title: 'QTD';
+};
+
+annotate SalesOrderService.products with {    
+    name @title: 'Produto';
+};
+
     

@@ -19,9 +19,11 @@
     "sourceMap": false,
     "paths": {
       "@/*": ["srv/*"],
-      "@models/*":["../@cds-models/*/index.ts","models/*"]},
-    "baseUrl": "." ,
-    "types": ["@sap/cds-compiler","node"]
+      "@models/*": ["@cds-models/*/index.ts","models/*"]
+    },
+    "baseUrl": ".",
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"]
   },
   "exclude": ["node_modules", "dist", "@cds-models"]
 }
