@@ -35,6 +35,6 @@ service SalesOrderService {
          }
         ]   
     entity products as projection on sales.products;
-
     entity SalesOrderLog as projection on sales.SalesOrderLog;
+    entity SalesOrderStatuses as projection on sales.SalesOrderStatuses;    
 }
