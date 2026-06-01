@@ -16,7 +16,7 @@ export class CustomerRepositoryImpl implements CustomerRepository {
         return CustomerModel.whit({
             id: dbCustomer.id,
             firstName: dbCustomer.firstName,
-            lastName: dbCustomer.lastName,
+            lastName: (dbCustomer as unknown as { lastName?: string }).lastName ?? '',
             email: dbCustomer.email,
         });
     }
