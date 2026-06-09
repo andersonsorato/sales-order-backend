@@ -1,20 +1,44 @@
 using { SalesOrderService } from '../routes/main';
 
 annotate SalesOrderService.SalesOrdersHeaders with @(
+    Capabilities: {
+        DeleteRestrictions : {
+            $Type : 'Capabilities.DeleteRestrictionsType',
+            Deletable: false,
+        },
+        FilterFunctions : [
+            'tolower',
+        ],
+        FilterRestrictions : {
+            $Type : 'Capabilities.FilterRestrictionsType',
+            FilterExpressionRestrictions:[
+                {
+                    Property: createdAt,
+                    AllowedExpressions: 'SingleRange'                    
+                },
+                {
+                    Property: status_id,
+                    AllowedExpressions: 'SearchExpression'                    
+                },
+            ]
+        },              
+    },
     UI: {
         HeaderInfo: {
             TypeName: 'Sales Order',
             TypeNamePlural: 'Sales Orders',
             Title: {
                 $Type: 'UI.DataField',
-                Value: id
+                Value: 'Pedido: {id}',
             }
         },
         SelectionFields: [
             id,
+            createdAt,
             totalamount,
             customers_id,
             status_id,
+            
         ],
         LineItem: [
             {
@@ -125,6 +149,7 @@ annotate SalesOrderService.SalesOrdersHeaders with @(
  {
         id @title: 'Ordem ID';
         totalamount @title: 'Total Amount Title';
+        createdAt @title: 'Data de Criação' @UI.HiddenFilter: false;
         customers @(
             title: 'Cliente ID',
             Common: {                
@@ -171,6 +196,7 @@ annotate SalesOrderService.SalesOrdersHeaders with @(
                 }
             }                                       
         );
+        
     };
     annotate SalesOrderService.SalesOrderStatuses with {
         id @Common.Text: description @Common.TextArrangement: #TextOnly;
@@ -249,6 +275,8 @@ annotate SalesOrderService.SalesOrderItems with @(
     id @title: 'Item ID';
     price @title: 'Preço';    
     quantity @title: 'QTD';
+    hearder @UI.Hidden: true;
+    products @UI.HiddenFilter @UI.Hidden;
 };
 
 annotate SalesOrderService.products with {    

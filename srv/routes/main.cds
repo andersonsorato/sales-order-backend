@@ -1,6 +1,10 @@
 using { sales } from '../../db/schema';
+using { db.types.salesreportbydays } from '../../db/types';
+
 
 @requires: ['authenticated-user']
+
+// entitys
 service SalesOrderService {
     @restrict:[ 
         {
@@ -36,5 +40,10 @@ service SalesOrderService {
         ]   
     entity products as projection on sales.products;
     entity SalesOrderLog as projection on sales.SalesOrderLog;
-    entity SalesOrderStatuses as projection on sales.SalesOrderStatuses;    
+    entity SalesOrderStatuses as projection on sales.SalesOrderStatuses;
+}
+
+// functions
+extend service SalesOrderService with {
+function getSalesReportByDays(days: salesreportbydays.Params: days ) returns array of salesreportbydays.ExpectedResult;
 }

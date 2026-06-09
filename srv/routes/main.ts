@@ -1,9 +1,12 @@
+/* eslint-disable max-lines-per-function */
 import '../configs/module-alias';
 
 import { FullRequestParams } from '@/routes/protocols';
 
+import { SalesReportRepositoryImpl } from '@/repositories/sales-report/implementation';
 import { customerController } from '@/factories/controllers/customers';
 import { salesOrderHeaderController } from '@/factories/controllers/sales-order-header';
+import { salesReportController } from '@/factories/controllers/sales-report';
 import { Request, Service } from '@sap/cds';
 import { SalesOrderHeaders, customers } from '@cds-models/sales';
 import {} from 'node:console';
@@ -35,5 +38,10 @@ export default (service: Service) => {
     service.after('CREATE', 'SalesOrdersHeaders', async (salesOrderHeaders: SalesOrderHeaders, request: Request) => {
         await salesOrderHeaderController.afterCreate(salesOrderHeaders, request.user);
         console.log(request.user);
+    });
+
+    service.on('getSalesReportByDays', async (request: Request) => {
+        const days = request.data?.days || 7;
+        return salesReportController.findByDays(days);
     });
 };
