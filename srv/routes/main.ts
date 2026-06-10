@@ -3,7 +3,6 @@ import '../configs/module-alias';
 
 import { FullRequestParams } from '@/routes/protocols';
 
-import { SalesReportRepositoryImpl } from '@/repositories/sales-report/implementation';
 import { customerController } from '@/factories/controllers/customers';
 import { salesOrderHeaderController } from '@/factories/controllers/sales-order-header';
 import { salesReportController } from '@/factories/controllers/sales-report';
@@ -43,5 +42,12 @@ export default (service: Service) => {
     service.on('getSalesReportByDays', async (request: Request) => {
         const days = request.data?.days || 7;
         return salesReportController.findByDays(days);
+    });
+    service.on('getSalesReportByCustomerId', async (request: Request) => {
+        const [{ id: customerId }] = request.params as unknown as { id: string }[];
+        if (!customerId) {
+            return request.reject(400, 'Customer ID is required');
+        }
+        return salesReportController.findByCustomerId(customerId);
     });
 };

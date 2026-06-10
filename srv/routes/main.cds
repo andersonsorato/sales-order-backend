@@ -1,5 +1,5 @@
 using { sales } from '../../db/schema';
-using { db.types.salesreportbydays } from '../../db/types';
+using { db.types.salesReport } from '../../db/types';
 
 
 @requires: ['authenticated-user']
@@ -27,8 +27,15 @@ service SalesOrderService {
             TO: 'admin'
          }
         ]   
-    entity customers as projection on sales.customers;   
-    @restrict:[ 
+    entity customers as projection on sales.customers actions{ 
+            @restrict:[
+                {
+                    grant: ['READ'],
+                    TO: 'authenticated-user'
+                }
+            ]
+        function getSalesReportByCustomerId() returns array of salesReport.ExpectedResult; };   
+   /* @restrict:[ 
         {
         grant: ['READ'],
         TO: 'read only'
@@ -37,7 +44,7 @@ service SalesOrderService {
             grant: ['READ', 'WRITE', 'DELETE'],
             TO: 'admin'
          }
-        ]   
+        ] */  
     entity products as projection on sales.products;
     entity SalesOrderLog as projection on sales.SalesOrderLog;
     entity SalesOrderStatuses as projection on sales.SalesOrderStatuses;
@@ -45,5 +52,5 @@ service SalesOrderService {
 
 // functions
 extend service SalesOrderService with {
-function getSalesReportByDays(days: salesreportbydays.Params: days ) returns array of salesreportbydays.ExpectedResult;
+function getSalesReportByDays(days: salesReport.Params: days ) returns array of salesReport.ExpectedResult;
 }

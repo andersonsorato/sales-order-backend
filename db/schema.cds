@@ -38,7 +38,8 @@ entity SalesOrderStatuses {
 entity customers: managed {
     key id : UUID;  
     firstName : String;  
-    email : String;  
+    email : String;
+    salesOrders : association to many SalesOrderHeaders on salesOrders.customers = $self;  
 }
 
 entity products: managed {

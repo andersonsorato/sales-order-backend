@@ -1,8 +1,8 @@
 import cds from '@sap/cds';
 
-import { ExpectedResult as SalesReportByDays } from '@/models/sales-report-by-days';
+import { ExpectedResult as SalesReportByDays } from '@/models/sales-report';
 
-import { SalesReportModel } from '@/models/sales-report-by-days';
+import { SalesReportModel } from '@/models/sales-report';
 import { SalesReportRepository } from './protocols';
 
 const { SELECT } = cds.ql;
@@ -24,6 +24,31 @@ export class SalesReportRepositoryImpl implements SalesReportRepository {
                 `customers.firstName || ' ' || 'nao adicionei' as customerFullName`,
             )
             .where({ createdAt: { between: subtractedDaysISOString, and: today } });
+        const salesReports = await cds.run(sql);
+        if (salesReports.length === 0) {
+            return null;
+        }
+        return salesReports.map(
+            (_salesReport: SalesReportByDays) =>
+                new SalesReportModel({
+                    salesOrderId: _salesReport.salesOrderId as string,
+                    SalesOrderTotalAmount: _salesReport.SalesOrderTotalAmount as number,
+                    customerId: _salesReport.customerId as string,
+                    customerFullName: _salesReport.customerFullName as string,
+                }),
+        );
+    }
+
+    public async findByCustomerId(customerId: string): Promise<SalesReportModel[] | null> {
+        const sql = SELECT.from('sales.SalesOrderHeaders')
+            .columns(
+                'id as salesOrderId',
+                'totalamount as SalesOrderTotalAmount',
+                'customers_id as customerId',
+                // eslint-disable-next-line quotes
+                `customers.firstName || ' ' || 'nao adicionei' as customerFullName`,
+            )
+            .where({ customers_id: customerId });
         const salesReports = await cds.run(sql);
         if (salesReports.length === 0) {
             return null;
