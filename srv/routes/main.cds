@@ -1,5 +1,9 @@
 using { sales } from '../../db/schema';
-using { db.types.salesReport } from '../../db/types';
+using {
+    db.types.salesReport as salesReport,
+    db.types.bulkCreateSalesOrders.Payload as BulkCreateSalesOrderPayload,
+    db.types.bulkCreateSalesOrders.ExpectedResult as BulkCreateSalesOrderExpectedResult,
+} from '../../db/types';
 
 
 @requires: ['authenticated-user']
@@ -53,4 +57,9 @@ service SalesOrderService {
 // functions
 extend service SalesOrderService with {
 function getSalesReportByDays(days: salesReport.Params: days ) returns array of salesReport.ExpectedResult;
+}
+
+//Actions
+extend service SalesOrderService with {
+    action bulkCreateSalesOrders(payload: array of BulkCreateSalesOrderPayload) returns array of BulkCreateSalesOrderExpectedResult;    
 }

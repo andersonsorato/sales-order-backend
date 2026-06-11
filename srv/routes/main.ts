@@ -50,4 +50,13 @@ export default (service: Service) => {
         }
         return salesReportController.findByCustomerId(customerId);
     });
+
+    service.on('bulkCreateSalesOrders', async (request: Request) => {
+        const payload = request.data?.payload;
+        if (!Array.isArray(payload) || payload.length === 0) {
+            return request.reject(400, 'Payload is required for bulkCreateSalesOrders');
+        }
+
+        return salesOrderHeaderController.bulkCreate(payload, request.user);
+    });
 };

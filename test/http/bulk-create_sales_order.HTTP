@@ -1,0 +1,33 @@
+
+###
+
+POST http://localhost:4004/odata/v4/sales-order/bulkCreateSalesOrders
+Content-Type: application/json
+Authorization: Basic admin:cuka
+
+{     
+  "payload": [ 
+                {   
+                  "customerId": "440586447-87ef-448a-98b0-e5fc15ed85b8", 
+                  "items": [ 
+                                {  
+                                  "productId": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 
+                                  "quantity": 2, 
+                                  "price": 50.25 
+                                } 
+                            ] 
+                },
+                {    
+                    "customerId": "40586447-87ef-448a-98b0-e5fc15ed85b8", 
+                    "items": [ 
+                                  {      
+                                    "productId": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 
+                                    "quantity": 1, 
+                                    "price": 100.75 
+                                  } 
+                              ] 
+                  }
+            ]
+}
+
+###
