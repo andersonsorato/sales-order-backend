@@ -63,4 +63,21 @@ export class SalesOrderItemModel {
         }
         return { isValid: false };
     }
+
+    public toCreateonObject(): {
+        id: string;
+        products_id: string;
+        quantity: number;
+        price: number;
+        product: string | null;
+    } {
+        const product = this.props.products.find((product) => product.id === this.props.productId);
+        return {
+            id: this.props.id,
+            products_id: this.props.productId,
+            quantity: this.props.quantity,
+            price: this.props.price,
+            product: product?.name ?? null,
+        };
+    }
 }

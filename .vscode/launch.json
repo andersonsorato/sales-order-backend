@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug app SalesOrder",
+            "runtimeExecutable": "/home/asoratol/.nvm/versions/node/v20.20.2/bin/npx",
+            "runtimeArgs": [
+                "cds-tsx", "watch"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": { "NODE_ENV": "development"},
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

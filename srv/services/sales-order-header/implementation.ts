@@ -55,7 +55,10 @@ export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
         const headerAsArray = Array.isArray(params) ? params : ([params] as SalesOrderHeader[]);
         const logs: SalesOrderLogModel[] = [];
         for (const header of headerAsArray) {
-            const products = (await this.getProductsByIds(params)) as ProductModel[];
+            const products = (await this.getProductsForHeader(header)) as ProductModel[];
+            if (!products) {
+                throw new Error('PRODUTO NAO ENCONTRADO');
+            }
             const items = this.getSalesOrderItems(header, products);
             const salesOrderHeader = this.getSalesOrderHeader(header, items);
             const productData = salesOrderHeader.getProductsData();
@@ -94,6 +97,18 @@ export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
         );
         const uniqueIds = Array.from(new Set(productsIds.filter(Boolean))) as string[];
         return this.productRepository.findByIds(uniqueIds);
+    }
+
+    private async getProductsForHeader(header: SalesOrderHeader): Promise<ProductModel[] | null> {
+        const productsFromItems = header.items?.flatMap((item) => item.products ?? []) ?? [];
+        const embeddedProducts = Array.from(
+            new Map(productsFromItems.map((product) => [product.id, product] as const)).values(),
+        );
+        if (embeddedProducts.length > 0) {
+            return embeddedProducts;
+        }
+
+        return this.getProductsByIds(header);
     }
     private getSalesOrderItems(params: SalesOrderHeader, products: ProductModel[]): SalesOrderItemModel[] {
         return params.items?.map((item) =>
@@ -210,6 +225,36 @@ export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
             }),
         );
         await this.salesOrderLogRepository.create(logs);
+    }
+    public async cloneSalesOrder(id: string, loggedUser: User): Promise<CreationPayloadValidationResult> {
+        const header = await this.salesOrderHeaderRepository.findCompleteSalesOrderById(id);
+        if (!header) {
+            return {
+                hasError: true,
+                error: new Error('Pedido nao encontrado'),
+            };
+        }
+        const validationResult = header.validateCreationPayload({ customer_Id: header.customerId });
+        if (validationResult.isValid) {
+            throw validationResult.errors as Error;
+        }
+        await this.salesOrderHeaderRepository.bulkCreate([header]);
+        const headerAsParams = {
+            customers_id: header.customerId,
+            items: header.items,
+        } as SalesOrderHeader;
+        await this.afterCreate([headerAsParams], loggedUser);
+        return this.serializeBulkCreateResult([header]);
+    }
+
+    private serializeBulkCreateResult(headers: SalesOrderHeaderModel[]): CreationPayloadValidationResult {
+        return {
+            hasError: false,
+            totalAmount: headers.reduce(
+                (acc, header) => acc + (header.calculateTotalAmount() - header.calculateDiscount()),
+                0,
+            ),
+        };
     }
 
     private getLoggedUser(loggedUser: User): LoggedUserModel {

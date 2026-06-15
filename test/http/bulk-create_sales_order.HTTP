@@ -8,7 +8,7 @@ Authorization: Basic admin:cuka
 {     
   "payload": [ 
                 {   
-                  "customerId": "440586447-87ef-448a-98b0-e5fc15ed85b8", 
+                  "customerId": "18998120-0628-4528-8b17-96152c0c54cb", 
                   "items": [ 
                                 {  
                                   "productId": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 
@@ -18,7 +18,7 @@ Authorization: Basic admin:cuka
                             ] 
                 },
                 {    
-                    "customerId": "40586447-87ef-448a-98b0-e5fc15ed85b8", 
+                    "customerId": "18998120-0628-4528-8b17-96152c0c54cb", 
                     "items": [ 
                                   {      
                                     "productId": "5584748b-88f9-42b2-a8b9-665e9b3c1806", 

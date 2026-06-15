@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch",
+    "dev": "cds-tsx watch",
     "lint": "eslint ./srv"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "@cap-js/cds-types": "^0.16.0",
     "@cap-js/sqlite": "^2.2.1",
     "@eslint/js": "^10.0.1",
+    "@sap/cds-dk": "^9.9.2",
     "@types/axios": "^0.14.4",
     "@types/node": "^25.6.0",
     "chai": "^6.2.2",

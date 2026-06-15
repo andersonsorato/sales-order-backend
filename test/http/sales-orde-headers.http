@@ -9,7 +9,7 @@ Content-Type: application/json
 Authorization: Basic admin:cuka
 
 {     
-  "customers_id": "40586447-87ef-448a-98b0-e5fc15ed85b8",
+  "customers_id": "440586447-87ef-448a-98b0-e5fc15ed85b8",
   "totalamount": 100.50,
   "items": [ 
                 {                                   
@@ -55,4 +55,14 @@ Content-Type: application/json
     "email" : "test@example.com"    
 }
 
+
+### clone sales order
+
+post http://localhost:4004/odata/v4/sales-order/SalesOrdersHeaders(11282881-8a0e-4361-838f-e3dd6f40f295)/cloneSalesOrder
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic admin:cuka
+
+{
+}
 

@@ -20,17 +20,15 @@ service SalesOrderService {
             TO: 'admin'
          }
         ]    
-    entity SalesOrdersHeaders as projection on sales.SalesOrderHeaders ;   
-    @restrict:[ 
+    entity SalesOrdersHeaders as projection on sales.SalesOrderHeaders actions {
+        @restrict: [
         {
-        grant: ['READ'],
-        TO: 'read only'
-        },
-        {
-            grant: ['READ', 'WRITE', 'DELETE'],
-            TO: 'admin'
-         }
-        ]   
+            grant: '*',
+            to: 'admin'
+        }
+    ]
+        action cloneSalesOrder() returns BulkCreateSalesOrderPayload;    
+    }   
     entity customers as projection on sales.customers actions{ 
             @restrict:[
                 {

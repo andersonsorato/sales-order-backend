@@ -8,7 +8,6 @@
     "noEmit": false,
     "outDir": "dist",
     "rootDir": ".",
-
     "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -16,7 +15,7 @@
     "noImplicitAny": false,
     "resolveJsonModule": true,
     "declaration": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "paths": {
       "@/*": ["srv/*"],
       "@models/*": ["@cds-models/*/index.ts","models/*"],
