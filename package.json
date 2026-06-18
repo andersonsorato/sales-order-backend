@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds-tsx watch",
+    "dev": "cds watch",
     "lint": "eslint ./srv"
   },
   "dependencies": {

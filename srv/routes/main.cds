@@ -7,7 +7,7 @@ using {
 
 
 @requires: ['authenticated-user']
-
+@path: '/sales-order'
 // entitys
 service SalesOrderService {
     @restrict:[ 
