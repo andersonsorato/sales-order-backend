@@ -13,7 +13,7 @@ service SalesOrderService {
     @restrict:[ 
         {
         grant: ['READ'],
-        TO: 'read only'
+        to: 'read_only_user'
         },
         {
             grant: ['READ', 'WRITE', 'DELETE'],

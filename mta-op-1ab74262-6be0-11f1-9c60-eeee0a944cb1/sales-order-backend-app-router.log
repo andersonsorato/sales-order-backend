@@ -1,0 +1,222 @@
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:55:33.402115] Updated app with guid d4422378-c609-4f4e-b8f5-34906345cc41 ({"lifecycle"=>{"data"=>{"buildpacks"=>[]}, "type"=>"buildpack"}}) (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:55:33.506739] Updating process: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:02.174352] Uploading app package for app with guid d4422378-c609-4f4e-b8f5-34906345cc41 (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:12.581007] Creating build for app with guid d4422378-c609-4f4e-b8f5-34906345cc41 (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.363774] Downloading zero_trust_sidecar_buildpack_1_16... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.363780] Downloading java_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.363804] Downloading java_buildpack_v5_preview... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.363838] Downloading sap_java_buildpack_jakarta_2_58... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.380043] Downloading php_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.412173] Downloaded php_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.412211] Downloading staticfile_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.413004] Downloaded java_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.413026] Downloading nginx_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.414873] Downloaded sap_java_buildpack_jakarta_2_58 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.414901] Downloading nodejs_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.436577] Downloaded zero_trust_sidecar_buildpack_1_16 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.436616] Downloading binary_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.454456] Downloaded staticfile_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.454493] Downloading zero_trust_sidecar_buildpack_1_15... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.455609] Downloaded binary_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.455637] Downloading python_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.466728] Downloaded nginx_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.466770] Downloading zero_trust_sidecar_buildpack_1_14... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.467382] Downloaded nodejs_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.467424] Downloading go_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.467742] Downloaded java_buildpack_v5_preview (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.467764] Downloading sap_java_buildpack_jakarta_2_59... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.481310] Downloaded zero_trust_sidecar_buildpack_1_15 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.481345] Downloading sap_java_buildpack_jakarta... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.482938] Downloaded go_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.482973] Downloading zero_trust_sidecar_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.495849] Downloaded python_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.495892] Downloading sap_java_buildpack_jakarta_2_62... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.495908] Downloaded zero_trust_sidecar_buildpack_1_14 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.498387] Downloaded sap_java_buildpack_jakarta_2_59 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.502632] Downloaded sap_java_buildpack_jakarta (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.517241] Downloaded sap_java_buildpack_jakarta_2_62 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.532617] Downloaded zero_trust_sidecar_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:14.532713] Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:15.488985] Security group rules were updated (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:15.588889] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.214920] Downloading app package... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.292361] Downloaded app package (148.5K) (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.886661] -----> Nodejs Buildpack version 1.9.1 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.887617] -----> Bootstrapping python (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.887635] -----> Installing python 3.13.13 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:16.889227] Copy [/tmp/buildpacks/ac648aa71a7866ca/dependencies/268a5e3743d51a14b86ea9da64439307/python_3.13.13_linux_x64_cflinuxfs4_8311abbf.tgz] (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.818362] -----> Installing binaries (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.818576] engines.node (package.json): ^20 || ^22 | ^24 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.818589] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.818693] [31;1m**ERROR**[0m Unable to install node: improper constraint:  ^22 | ^24 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.823697] Failed to compile droplet: Failed to run all supply scripts: exit status 14 (STDERR, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:21.840415] Failed to read buildpack config.yml for buildpack key 9fbe9eac-5a7f-49f1-ac5b-ae3764ad0dd8_e92a78a8b608d44d2f8f1ce9a3e9376552d665fc2d541c0dbb37ace7e1a77d01: open /tmp/contents3425618773/deps/0/config.yml: no such file or directoryExit status 223 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:23.480183] Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:23.480234] Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:23.519662] Staging failed for build 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:23.531606] Failed to stage build: staging failed (STDERR, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T12:56:25.902337] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance 8474990d-7521-4a96-92e0-edaa87aac80d (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:09:48.126600] Updated app with guid d4422378-c609-4f4e-b8f5-34906345cc41 ({"lifecycle"=>{"data"=>{"buildpacks"=>[]}, "type"=>"buildpack"}}) (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:09:48.214713] Updating process: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:14.456789] Uploading app package for app with guid d4422378-c609-4f4e-b8f5-34906345cc41 (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:24.884193] Creating build for app with guid d4422378-c609-4f4e-b8f5-34906345cc41 (STDOUT, API)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.394620] Downloading binary_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.394666] Downloading nodejs_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.394698] Downloading python_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.395173] Downloading zero_trust_sidecar_buildpack_1_16... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.412957] Downloading staticfile_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.451713] Downloaded python_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.451757] Downloading sap_java_buildpack_jakarta_2_59... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.451901] Downloaded nodejs_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.451939] Downloading java_buildpack_v5_preview... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.454870] Downloaded zero_trust_sidecar_buildpack_1_16 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.454908] Downloading sap_java_buildpack_jakarta... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.484558] Downloaded staticfile_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.484600] Downloading sap_java_buildpack_jakarta_2_62... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.492983] Downloaded sap_java_buildpack_jakarta_2_59 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.493021] Downloading zero_trust_sidecar_buildpack_1_14... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.494363] Downloaded binary_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.494397] Downloading sap_java_buildpack_jakarta_2_58... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.499109] Downloaded java_buildpack_v5_preview (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.499159] Downloading go_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.506900] Downloaded sap_java_buildpack_jakarta (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.506933] Downloading nginx_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.527813] Downloaded sap_java_buildpack_jakarta_2_62 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.527858] Downloading zero_trust_sidecar_buildpack_1_15... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.549070] Downloaded go_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.549108] Downloading java_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.556818] Downloaded sap_java_buildpack_jakarta_2_58 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.556853] Downloading zero_trust_sidecar_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.561575] Downloaded nginx_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.561651] Downloading php_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.574415] Downloaded zero_trust_sidecar_buildpack_1_15 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.575501] Downloaded zero_trust_sidecar_buildpack_1_14 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.584665] Downloaded php_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.606886] Downloaded zero_trust_sidecar_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.612749] Downloaded java_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:26.612850] Cell c839c7b1-088e-41af-b9b7-66256aacd457 creating container for instance bb5e592d-1384-4e86-af4d-15e75d3090d8 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:27.652831] Security group rules were updated (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:27.766414] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully created container for instance bb5e592d-1384-4e86-af4d-15e75d3090d8 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:28.472244] Downloading app package... (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:28.556547] Downloaded app package (148.5K) (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:29.190065] -----> Nodejs Buildpack version 1.9.1 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:29.191433] -----> Bootstrapping python (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:29.191451] -----> Installing python 3.13.13 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:29.191562] Copy [/tmp/buildpacks/ac648aa71a7866ca/dependencies/268a5e3743d51a14b86ea9da64439307/python_3.13.13_linux_x64_cflinuxfs4_8311abbf.tgz] (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.944593] -----> Installing binaries (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.944797] engines.node (package.json): ^20 || ^22 | ^24 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.944818] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.944998] [31;1m**ERROR**[0m Unable to install node: improper constraint:  ^22 | ^24 (STDOUT, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.950262] Failed to compile droplet: Failed to run all supply scripts: exit status 14 (STDERR, STG)#
+#2026 06 19 13:10:34.867#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-app-router#flowable-async-job-executor-thread-7799#
+[PollStageAppStatusExecution] d4422378-c609-4f4e-b8f5-34906345cc41 [2026-06-19T13:10:33.960162] Failed to read buildpack config.yml for buildpack key 9fbe9eac-5a7f-49f1-ac5b-ae3764ad0dd8_e92a78a8b608d44d2f8f1ce9a3e9376552d665fc2d541c0dbb37ace7e1a77d01: open /tmp/contents3721439005/deps/0/config.yml: no such file or directoryExit status 223 (STDOUT, STG)#

@@ -1,0 +1,246 @@
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T12:59:43.796668] Cell d1cc041a-d5a1-41d6-b9f6-6cda736ce3f0 creating container for instance c99c4aab-a50a-47f8-67c3-eb02 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T12:59:44.781208] Security group rules were updated (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T12:59:44.885197] Cell d1cc041a-d5a1-41d6-b9f6-6cda736ce3f0 successfully created container for instance c99c4aab-a50a-47f8-67c3-eb02 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T12:59:45.211736] Downloading droplet... (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079317] Copying droplet into the container failed: stream-in: nstar: error streaming in: exit status 2. Output: tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxppc64le-gcc6/hana-client.node: Wrote only 512 of 10240 bytes (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079355] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079364] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079369] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079383] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079387] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:00.079390] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:06.041538] Cell d1cc041a-d5a1-41d6-b9f6-6cda736ce3f0 stopping instance c99c4aab-a50a-47f8-67c3-eb02 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:06.041576] Cell d1cc041a-d5a1-41d6-b9f6-6cda736ce3f0 destroying container for instance c99c4aab-a50a-47f8-67c3-eb02 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:06.054216] Process has crashed with type: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:00:08.493602] Cell d1cc041a-d5a1-41d6-b9f6-6cda736ce3f0 successfully destroyed container for instance c99c4aab-a50a-47f8-67c3-eb02 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:21.041213] Cell c839c7b1-088e-41af-b9b7-66256aacd457 creating container for instance 767acf4f-5f3b-41db-6c98-99ed (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:22.068861] Security group rules were updated (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:22.172248] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully created container for instance 767acf4f-5f3b-41db-6c98-99ed (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:22.337277] Downloading droplet... (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243689] Copying droplet into the container failed: stream-in: nstar: error streaming in: exit status 2. Output: tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxppc64le-gcc6/hana-client.node: Wrote only 512 of 10240 bytes (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243719] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243725] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243748] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243754] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243759] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:30.243769] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:35.655777] Cell c839c7b1-088e-41af-b9b7-66256aacd457 stopping instance 767acf4f-5f3b-41db-6c98-99ed (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:35.655812] Cell c839c7b1-088e-41af-b9b7-66256aacd457 destroying container for instance 767acf4f-5f3b-41db-6c98-99ed (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:35.678085] Process has crashed with type: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:01:39.137792] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully destroyed container for instance 767acf4f-5f3b-41db-6c98-99ed (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:03:56.941019] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 creating container for instance a6cd4c3e-f001-44b6-660d-25d5 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:03:57.883175] Security group rules were updated (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:03:57.992825] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 successfully created container for instance a6cd4c3e-f001-44b6-660d-25d5 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:03:58.925113] Downloading droplet... (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352599] Copying droplet into the container failed: stream-in: nstar: error streaming in: exit status 2. Output: tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxppc64le-gcc6/hana-client.node: Wrote only 512 of 10240 bytes (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352643] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352649] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352654] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352658] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352661] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:15.352665] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:22.104498] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 stopping instance a6cd4c3e-f001-44b6-660d-25d5 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:22.104546] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 destroying container for instance a6cd4c3e-f001-44b6-660d-25d5 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:22.124807] Process has crashed with type: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:04:24.411963] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 successfully destroyed container for instance a6cd4c3e-f001-44b6-660d-25d5 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:37.728616] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 creating container for instance 05be16ed-e26f-4b62-4428-cb21 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:38.609877] Security group rules were updated (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:38.711687] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 successfully created container for instance 05be16ed-e26f-4b62-4428-cb21 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:39.709552] Downloading droplet... (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088237] Copying droplet into the container failed: stream-in: nstar: error streaming in: exit status 2. Output: tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxppc64le-gcc6/hana-client.node: Wrote only 512 of 10240 bytes (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088269] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088273] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088276] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64_alpine-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088280] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088282] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6: Cannot mkdir: No space left on device (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:47.088285] tar: ./deps/0/node_modules/@sap/hana-client/prebuilt/linuxx86_64-gcc6/hana-client.node: Cannot open: No such file or directory (STDERR, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:52.880168] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 stopping instance 05be16ed-e26f-4b62-4428-cb21 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:52.880216] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 destroying container for instance 05be16ed-e26f-4b62-4428-cb21 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:52.899154] Process has crashed with type: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:08:56.289402] Cell 77283d80-dfa7-40ba-ba4e-265aef112085 successfully destroyed container for instance 05be16ed-e26f-4b62-4428-cb21 (STDOUT, CELL)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:09:46.296947] Updated app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 ({"lifecycle"=>{"data"=>{"buildpacks"=>["nodejs_buildpack"]}, "type"=>"buildpack"}}) (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:09:46.399574] Updating process: "web" (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:14.655552] Uploading app package for app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:14.895286] Updated app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:25.054626] Stopping app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:25.290224] Creating build for app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 (STDOUT, API)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:25.720881] Downloading nodejs_buildpack... (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:25.783088] Downloaded nodejs_buildpack (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:25.783202] Cell c839c7b1-088e-41af-b9b7-66256aacd457 creating container for instance 4eaa3777-2f53-49cb-bbdb-90c6ca1cac7c (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:26.856386] Security group rules were updated (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:26.974157] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully created container for instance 4eaa3777-2f53-49cb-bbdb-90c6ca1cac7c (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:27.814854] Downloading app package... (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:27.816113] Downloading build artifacts cache... (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:28.071601] Downloaded app package (249.4K) (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:33.775255] Downloaded build artifacts cache (77.8M) (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:33.911131] -----> Nodejs Buildpack version 1.9.1 (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:33.965959] -----> Bootstrapping python (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:33.966153] -----> Installing python 3.13.13 (STDOUT, STG)#
+#2026 06 19 13:10:34.821#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7806#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:33.966361] Copy [/tmp/buildpacks/ac648aa71a7866ca/dependencies/268a5e3743d51a14b86ea9da64439307/python_3.13.13_linux_x64_cflinuxfs4_8311abbf.tgz] (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.374886] -----> Installing binaries (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.375282] engines.node (package.json): >=18 (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.375929] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.375954] [31;1m**WARNING**[0m Dangerous semver range (>) in engines.node. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.376105] -----> Installing node 24.15.0 (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:39.376543] Copy [/tmp/buildpacks/ac648aa71a7866ca/dependencies/6441e97e6386f47ec4c16cfdf8db0a17/node_24.15.0_linux_x64_cflinuxfs4_1a62d98b.tgz] (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.268106] Using default npm version: 11.12.1 (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.268129] -----> Installing yarn 1.22.22 (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.268342] Copy [/tmp/buildpacks/ac648aa71a7866ca/dependencies/e4fe26756e9984a665478d350474fa2e/yarn_1.22.22_linux_noarch_any-stack_b6132b86.tgz] (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.675123] Installed yarn 1.22.22 (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.675153] -----> Creating runtime environment (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676920] [34;1mPRO TIP:[0m It is recommended to vendor the application's Node.js dependencies (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676939] Visit http://docs.cloudfoundry.org/buildpacks/node/index.html#vendoring (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676943] NODE_ENV=production (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676946] NODE_HOME=/tmp/contents1887035924/deps/0/node (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676967] NODE_MODULES_CACHE=true (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676969] NODE_VERBOSE=false (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676979] NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.676982] NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.677117] -----> Building dependencies (STDOUT, STG)#
+#2026 06 19 13:10:45.151#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7815#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:42.677147] Installing node modules (package.json + package-lock.json) (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.393841] added 555 packages, and audited 556 packages in 16s (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.394133] 105 packages are looking for funding (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.394151] run `npm fund` for details (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421015] 27 vulnerabilities (2 low, 4 moderate, 16 high, 5 critical) (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421044] To address issues that do not require attention, run: (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421052] npm audit fix (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421055] Some issues need review, and may require choosing (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421057] a different dependency. (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:58.421067] Run `npm audit` for details. (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:59.076090] [31;1m**WARNING**[0m Unmet dependencies don't fail npm install but may cause runtime issues (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:59.076122] See: https://github.com/npm/npm/issues/7494 (STDOUT, STG)#
+#2026 06 19 13:11:05.211#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7829#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:10:59.118910] Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:29.128583] Exit status 0 (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:29.128637] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:29.128682] Uploading droplet... (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:29.128998] Uploading build artifacts cache... (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:30.827321] Uploaded build artifacts cache (116M) (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:31.129506] Creating droplet for app with guid 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 (STDOUT, API)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:33.263213] Uploaded droplet (140.9M) (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:33.318957] Uploading complete (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:33.831706] Cell c839c7b1-088e-41af-b9b7-66256aacd457 stopping instance 4eaa3777-2f53-49cb-bbdb-90c6ca1cac7c (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:33.831742] Cell c839c7b1-088e-41af-b9b7-66256aacd457 destroying container for instance 4eaa3777-2f53-49cb-bbdb-90c6ca1cac7c (STDOUT, STG)#
+#2026 06 19 13:11:35.765#Z#DEBUG#1ab74262-6be0-11f1-9c60-eeee0a944cb1.sales-order-backend-service#flowable-async-job-executor-thread-7849#
+[PollStageAppStatusExecution] 9003f0e5-6bcf-4d09-9c8c-7e9f95590466 [2026-06-19T13:11:33.887790] Staging complete for build 4eaa3777-2f53-49cb-bbdb-90c6ca1cac7c (STDOUT, API)#

@@ -24,5 +24,6 @@
     "types": ["node"],
     "typeRoots": ["./node_modules/@types"]
   },
+  "include": ["srv"],
   "exclude": ["node_modules", "dist", "@cds-models"]
 }

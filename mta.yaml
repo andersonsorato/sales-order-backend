@@ -19,7 +19,7 @@ modules:
     path: gen/srv
     parameters:
       buildpack: nodejs_buildpack
-      disk-quota: 256M
+      disk-quota: 1024M
       memory: 512M
     build-parameters: 
       builder: custom
@@ -34,8 +34,8 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - sales-order-backend-db
-      - sales-order-backend-uaa
+      - name: sales-order-backend-db
+      - name: sales-order-backend-uaa
 
   - name: sales-order-backend-db-deployer
     type: hdb
@@ -46,15 +46,18 @@ modules:
       ignore: 
         - node_modules
     requires:
-      - sales-order-backend-db
+      - name: sales-order-backend-db
 
   - name: sales-order-backend-app-router
-    type: approuter.node.js
+    type: approuter.nodejs
     path: app-router
     parameters:      
-      disk-quota: 256M
+      disk-quota: 1024M
       memory: 256M
-    build-parameters:      
+    build-parameters:  
+      builder: custom
+      commands: 
+        - yarn
       ignore: 
         - node_modules
     requires: 
@@ -66,11 +69,11 @@ modules:
           url: "~{srv-url}"
           forwardAuthToken: true
 
-resouces:
+resources:
   - name: sales-order-backend-db
     type: com.sap.xs.hdi-container
     parameters:
-      service: hana-trial
+      service: hana
       service-plan: hdi-shared
       config:
         schema: SALESORDERDB

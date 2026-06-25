@@ -13,19 +13,23 @@ import {} from 'node:console';
 //const { SELECT } = cds.ql;
 
 export default (service: Service) => {
-    service.before(['READ', 'WRITE', 'DELETE'], '*', (request: Request) => {
-        if (!request.user.is('admin')) {
-            return request.reject(403, 'Unauthorized access - admin role required' + (request.user as string));
+    service.before(['CREATE', 'UPDATE', 'DELETE'], '*', (request: Request) => {
+        if (!request.user.is('admin') && !request.user.is('technical_admin')) {
+            return request.reject(403, `Unauthorized access - admin role required: ${request.user?.id}`);
         }
     });
     service.before('READ', '*', (request: Request) => {
         if (request.user.is('read only') && !request.user.is('admin')) {
-            return request.reject(403, 'Unauthorized access - read only role required' + (request.user as string));
+            return request.reject(403, 'msg de acesso - read only role required ' + request.user?.id);
         }
     });
     service.after('READ', 'customers', (customerList: customers, request) => {
         //request.results = customerController.afterRead(customerList);
-        (request as unknown as FullRequestParams<customers>).result = customerController.afterRead(customerList);
+        const result = customerController.afterRead(customerList);
+        if (result.status >= 400) {
+            return request.error(result.status, result.data as string);
+        }
+        (request as unknown as FullRequestParams<customers>).result = result.data as customers;
     });
     service.before('CREATE', 'SalesOrdersHeaders', async (request: Request) => {
         const result = await salesOrderHeaderController.beforeCreate(request.data);

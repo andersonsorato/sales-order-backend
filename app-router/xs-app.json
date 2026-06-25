@@ -4,8 +4,9 @@
         {
             "source": "^/sales-order/(.*)",
             "destination": "srv-api",
-            "csrProtection": true,
+            "csrfProtection": true,
             "authenticationType": "xsuaa"
         }
     ]
+
 }
