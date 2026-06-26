@@ -10,7 +10,8 @@
     "clean": "rimraf gen dist mta_archives",
     "build": "mbt build --mtar sales-order-backend",
     "deploy": "cf deploy mta_archives/sales-order-backend.mtar --retries 0",
-    "bd": "npm-run-all clean build deploy"
+    "bd": "npm-run-all clean build deploy",
+    "test:unit": "vitest --dir test/unit"
   },
   "dependencies": {
     "@cap-js/hana": "^2.8.0",
@@ -36,6 +37,7 @@
     "@types/axios": "^0.14.4",
     "@types/node": "^25.6.0",
     "@types/passport": "^0",
+    "@vitest/coverage-v8": "^4.1.9",
     "a": "^4.0.8",
     "chai": "^6.2.2",
     "eslint": "^10.4.0",
@@ -48,7 +50,8 @@
     "rimraf": "^6.1.3",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.0"
+    "typescript-eslint": "^8.60.0",
+    "vitest": "^4.1.9"
   },
   "engines": {
     "node": ">=18"
