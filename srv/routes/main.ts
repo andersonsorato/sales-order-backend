@@ -53,10 +53,11 @@ export default (service: Service) => {
     });
     service.on('getSalesReportByCustomerId', async (request: Request) => {
         const [{ id: customerId }] = request.params as unknown as { id: string }[];
-        if (!customerId) {
-            return request.reject(400, 'Customer ID is required');
+        const result = await salesReportController.findByCustomerId(customerId);
+        if (result.status >= 400) {
+            return request.reject(result.status, result.data as string);
         }
-        return salesReportController.findByCustomerId(customerId);
+        return result.data;
     });
 
     service.on('bulkCreateSalesOrders', async (request: Request) => {

@@ -21,11 +21,17 @@ export class SalesReportServiceImpl implements SalesReportService {
             return left(new ServerError(errorInstance.stack as string, errorInstance.message));
         }
     }
-    public async findByCustomerId(customerId: string): Promise<SalesReportByDay[]> {
-        const reportData = await this.repository.findByCustomerId(customerId);
-        if (!reportData) {
-            return [];
+    public async findByCustomerId(customerId: string): Promise<Either<AbstractErro, SalesReportByDay[]>> {
+        try {
+            const reportData = await this.repository.findByCustomerId(customerId);
+            if (!reportData) {
+                return left(new NotFoundError('Nenhum dado encontrado'));
+            }
+            const mappedata = reportData?.map((data) => data.toObject());
+            return right(mappedata);
+        } catch (error) {
+            const errorInstance = error instanceof Error ? error : new Error(String(error));
+            return left(new ServerError(errorInstance.stack as string, errorInstance.message));
         }
-        return reportData?.map((data) => data.toObject());
     }
 }

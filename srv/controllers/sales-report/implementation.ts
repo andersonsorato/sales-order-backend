@@ -1,4 +1,3 @@
-import { ExpectedResult } from '@/models/sales-report';
 import { SalesReportController } from './protocols';
 import { SalesReportService } from '@/services/sales-report/protocol';
 import { BaseControllerImpl, BaseControllerResponse } from '../base';
@@ -14,7 +13,11 @@ export class SalesReportControllerImpl extends BaseControllerImpl implements Sal
         }
         return this.success(result.value);
     }
-    public async findByCustomerId(customerId: string): Promise<ExpectedResult[]> {
-        return await this.service.findByCustomerId(customerId);
+    public async findByCustomerId(customerId: string): Promise<BaseControllerResponse> {
+        const result = await this.service.findByCustomerId(customerId);
+        if (result.isLeft()) {
+            return this.error(result.value.code, result.value.message);
+        }
+        return this.success(result.value);
     }
 }
