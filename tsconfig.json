@@ -19,7 +19,7 @@
     "paths": {
       "@/*": ["srv/*"],
       "@models/*": ["@cds-models/*/index.ts","models/*"],
-      "@tests": ["./test/*"]
+      "@tests/*": ["./test/*"]
     },
     "baseUrl": ".",
     "types": ["node"],

@@ -12,7 +12,7 @@ export class CustomerServiceImpl implements CustomerService {
                 const customerR = CustomerModel.whit({
                     id: customer.id,
                     firstName: customer.firstName,
-                    lastName: (customer as unknown as { lastName?: string }).lastName ?? '',
+                    //lastName: (customer as unknown as { lastName?: string }).lastName ?? '',
                     email: customer.email,
                 });
                 console.log(customerR);

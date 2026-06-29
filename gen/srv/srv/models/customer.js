@@ -1,47 +1,41 @@
-export type CustomerProps = {
-    id: string;
-    firstName: string;
-    lastName?: string;
-    email: string;
-};
-export class CustomerModel {
-    constructor(private props: CustomerProps) {}
-
-    public static whit(props: CustomerProps): CustomerModel {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerModel = void 0;
+class CustomerModel {
+    constructor(props) {
+        this.props = props;
+    }
+    static whit(props) {
         const customer = new CustomerModel(props);
         customer.setDefaultDomain();
         return customer;
     }
-
-    public get id() {
+    get id() {
         return this.props.id;
     }
-    public get firstName() {
+    get firstName() {
         return this.props.firstName;
     }
-    public get lastName() {
+    get lastName() {
         return this.props.lastName ?? '';
     }
-    public get email() {
+    get email() {
         return this.props.email;
     }
-
-    public setDefaultDomain(): CustomerModel {
-        if (!this.props.email) {
-            return this;
-        }
+    setDefaultDomain() {
         if (!this.props.email?.includes('@')) {
             this.props.email = `${this.props.email}@defaultdomain.com`;
         }
         return this;
     }
-
-    public toObject(): CustomerProps {
+    toObject() {
         return {
             id: this.props.id,
             firstName: this.props.firstName,
-            //lastName: this.props.lastName ?? '',
+            lastName: this.props.lastName ?? '',
             email: this.props.email,
         };
     }
 }
+exports.CustomerModel = CustomerModel;
+//# sourceMappingURL=customer.js.map

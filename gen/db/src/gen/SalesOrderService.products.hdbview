@@ -1,0 +1,10 @@
+VIEW SalesOrderService_products AS SELECT
+  products_0.createdAt,
+  products_0.createdBy,
+  products_0.modifiedAt,
+  products_0.modifiedBy,
+  products_0.id,
+  products_0.name,
+  products_0.price,
+  products_0.stock
+FROM sales_products AS products_0

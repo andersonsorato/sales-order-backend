@@ -1,0 +1,5 @@
+COLUMN TABLE sales_SalesOrderStatuses (
+  id NVARCHAR(5000) NOT NULL,
+  description NVARCHAR(5000),
+  PRIMARY KEY(id)
+)

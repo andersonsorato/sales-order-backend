@@ -1,0 +1,11 @@
+COLUMN TABLE sales_SalesOrderHeaders (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  id NVARCHAR(36) NOT NULL,
+  customers_id NVARCHAR(36),
+  status_id NVARCHAR(5000),
+  totalamount DECIMAL(15, 2),
+  PRIMARY KEY(id)
+)

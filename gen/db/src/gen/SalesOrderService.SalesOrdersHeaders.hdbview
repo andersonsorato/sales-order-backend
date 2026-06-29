@@ -1,0 +1,10 @@
+VIEW SalesOrderService_SalesOrdersHeaders AS SELECT
+  SalesOrderHeaders_0.createdAt,
+  SalesOrderHeaders_0.createdBy,
+  SalesOrderHeaders_0.modifiedAt,
+  SalesOrderHeaders_0.modifiedBy,
+  SalesOrderHeaders_0.id,
+  SalesOrderHeaders_0.customers_id,
+  SalesOrderHeaders_0.status_id,
+  SalesOrderHeaders_0.totalamount
+FROM sales_SalesOrderHeaders AS SalesOrderHeaders_0

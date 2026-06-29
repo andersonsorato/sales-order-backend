@@ -1,0 +1,4 @@
+VIEW SalesOrderService_SalesOrderStatuses AS SELECT
+  SalesOrderStatuses_0.id,
+  SalesOrderStatuses_0.description
+FROM sales_SalesOrderStatuses AS SalesOrderStatuses_0

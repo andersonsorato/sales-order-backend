@@ -1,0 +1,2518 @@
+{
+  "namespace": "sales",
+  "definitions": {
+    "sales.SalesOrderHeaders": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "customers": {
+          "type": "cds.Association",
+          "target": "sales.customers",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "type": "cds.Association",
+          "target": "sales.SalesOrderStatuses",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "totalamount": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "items": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sales.SalesOrderItems",
+          "on": [
+            {
+              "ref": [
+                "items",
+                "hearder"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sales.SalesOrderItems": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "hearder": {
+          "type": "cds.Association",
+          "target": "sales.SalesOrderHeaders",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "products": {
+          "type": "cds.Association",
+          "target": "sales.products",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "product": {
+          "type": "cds.String"
+        },
+        "quantity": {
+          "type": "cds.Integer"
+        },
+        "price": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "sales.SalesOrderLog": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "header": {
+          "type": "cds.Association",
+          "target": "sales.SalesOrderHeaders",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "userData": {
+          "type": "cds.LargeString"
+        },
+        "orderData": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "sales.SalesOrderStatuses": {
+      "kind": "entity",
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.String",
+          "enum": {
+            "COMPLETED": {
+              "val": "COMPLETED"
+            },
+            "PENDING": {
+              "val": "PENDING"
+            },
+            "REJECTED": {
+              "val": "REJECTED"
+            }
+          }
+        },
+        "description": {
+          "localized": true,
+          "type": "cds.String"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sales.SalesOrderStatuses.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "id"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sales.SalesOrderStatuses.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "id"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "id"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sales.customers": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "firstName": {
+          "type": "cds.String"
+        },
+        "email": {
+          "type": "cds.String"
+        },
+        "salesOrders": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sales.SalesOrderHeaders",
+          "on": [
+            {
+              "ref": [
+                "salesOrders",
+                "customers"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sales.products": {
+      "kind": "entity",
+      "includes": [
+        "managed"
+      ],
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "name": {
+          "type": "cds.String"
+        },
+        "price": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "stock": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "cds.outbox.Messages": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "timestamp": {
+          "type": "cds.Timestamp"
+        },
+        "target": {
+          "type": "cds.String"
+        },
+        "msg": {
+          "type": "cds.LargeString"
+        },
+        "attempts": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "partition": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "lastError": {
+          "type": "cds.LargeString"
+        },
+        "lastAttemptTimestamp": {
+          "type": "cds.Timestamp"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 23
+        },
+        "task": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "appid": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "Language": {
+      "kind": "type",
+      "@title": "{i18n>Language}",
+      "@description": "{i18n>LanguageCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Languages",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Currency": {
+      "kind": "type",
+      "@title": "{i18n>Currency}",
+      "@description": "{i18n>CurrencyCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Currencies",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "kind": "type",
+      "@title": "{i18n>Country}",
+      "@description": "{i18n>CountryCode.Description}",
+      "type": "cds.Association",
+      "target": "sap.common.Countries",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Timezone": {
+      "kind": "type",
+      "type": "cds.Association",
+      "target": "sap.common.Timezones",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "sap.common": {
+      "kind": "context"
+    },
+    "sap.common.Locale": {
+      "kind": "type",
+      "@title": "{i18n>LanguageCode}",
+      "type": "cds.String",
+      "length": 14
+    },
+    "sap.common.Languages": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Languages.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Countries": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Countries.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Currencies": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "symbol": {
+          "@title": "{i18n>CurrencySymbol}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "minorUnit": {
+          "@title": "{i18n>CurrencyMinorUnit}",
+          "type": "cds.Int16"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Currencies.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Timezones": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@title": "{i18n>TimeZoneCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Timezones.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Timezones.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.CodeList": {
+      "kind": "aspect",
+      "@cds.autoexpose": true,
+      "@cds.persistence.skip": "if-unused",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.odata.valuelist": true,
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        }
+      }
+    },
+    "sap.common.TextsAspect": {
+      "kind": "aspect",
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "sap.common.FlowHistory": {
+      "kind": "aspect",
+      "@cds.persistence.skip": "if-unused",
+      "elements": {
+        "transitions_": {
+          "@odata.draft.enabled": false,
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "targetAspect": {
+            "elements": {
+              "timestamp": {
+                "@cds.on.insert": {
+                  "=": "$now"
+                },
+                "@UI.HiddenFilter": true,
+                "@UI.ExcludeFromNavigationContext": true,
+                "@Core.Immutable": true,
+                "@title": "{i18n>CreatedAt}",
+                "@readonly": true,
+                "key": true,
+                "type": {
+                  "ref": [
+                    "managed",
+                    "createdAt"
+                  ]
+                }
+              },
+              "user": {
+                "@cds.on.insert": {
+                  "=": "$user"
+                },
+                "@UI.HiddenFilter": true,
+                "@UI.ExcludeFromNavigationContext": true,
+                "@Core.Immutable": true,
+                "@title": "{i18n>CreatedBy}",
+                "@readonly": true,
+                "@description": "{i18n>UserID.Description}",
+                "type": {
+                  "ref": [
+                    "managed",
+                    "createdBy"
+                  ]
+                },
+                "length": 255
+              },
+              "status": {
+                "type": "cds.String"
+              },
+              "comment": {
+                "type": "cds.String"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cuid": {
+      "kind": "aspect",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "managed": {
+      "kind": "aspect",
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        }
+      }
+    },
+    "temporal": {
+      "kind": "aspect",
+      "elements": {
+        "validFrom": {
+          "@cds.valid.from": true,
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "type": "cds.Timestamp"
+        }
+      }
+    },
+    "User": {
+      "kind": "type",
+      "@title": "{i18n>UserID}",
+      "@description": "{i18n>UserID.Description}",
+      "type": "cds.String",
+      "length": 255
+    },
+    "SalesOrderService": {
+      "@source": "srv/routes/main.cds",
+      "kind": "service",
+      "@requires": [
+        "authenticated-user"
+      ],
+      "@path": "/sales-order"
+    },
+    "SalesOrderService.SalesOrdersHeaders": {
+      "kind": "entity",
+      "@restrict": [
+        {
+          "grant": [
+            "READ"
+          ],
+          "to": "read_only_user"
+        },
+        {
+          "grant": [
+            "READ",
+            "WRITE",
+            "DELETE"
+          ],
+          "TO": "admin"
+        }
+      ],
+      "@Capabilities.DeleteRestrictions.$Type": "Capabilities.DeleteRestrictionsType",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.FilterFunctions": [
+        "tolower"
+      ],
+      "@Capabilities.FilterRestrictions.$Type": "Capabilities.FilterRestrictionsType",
+      "@Capabilities.FilterRestrictions.FilterExpressionRestrictions": [
+        {
+          "Property": {
+            "=": "createdAt"
+          },
+          "AllowedExpressions": "SingleRange"
+        },
+        {
+          "Property": {
+            "=": "status_id"
+          },
+          "AllowedExpressions": "SearchExpression"
+        }
+      ],
+      "@UI.HeaderInfo.TypeName": "Sales Order",
+      "@UI.HeaderInfo.TypeNamePlural": "Sales Orders",
+      "@UI.HeaderInfo.Title.$Type": "UI.DataField",
+      "@UI.HeaderInfo.Title.Value": "Pedido: {id}",
+      "@UI.SelectionFields": [
+        {
+          "=": "id"
+        },
+        {
+          "=": "createdAt"
+        },
+        {
+          "=": "totalamount"
+        },
+        {
+          "=": "customers_id"
+        },
+        {
+          "=": "status_id"
+        }
+      ],
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "ID label",
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          },
+          "Value": {
+            "=": "id"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "totalamount"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "10%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Data de Criação",
+          "Value": {
+            "=": "createdAt"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Criado por",
+          "Value": {
+            "=": "createdBy"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Cliente",
+          "Value": {
+            "=": "customers_id"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Status",
+          "Value": {
+            "=": "status_id"
+          },
+          "Criticality": {
+            "=": "status.id = 'COMPLETED' ? 3 : (status.id = 'PENDING' ? 2 : 1 )",
+            "xpr": [
+              "case",
+              "when",
+              {
+                "ref": [
+                  "status",
+                  "id"
+                ]
+              },
+              "=",
+              {
+                "val": "COMPLETED"
+              },
+              "then",
+              {
+                "val": 3
+              },
+              "else",
+              {
+                "xpr": [
+                  "case",
+                  "when",
+                  {
+                    "ref": [
+                      "status",
+                      "id"
+                    ]
+                  },
+                  "=",
+                  {
+                    "val": "PENDING"
+                  },
+                  "then",
+                  {
+                    "val": 2
+                  },
+                  "else",
+                  {
+                    "val": 1
+                  },
+                  "end"
+                ]
+              },
+              "end"
+            ]
+          },
+          "CriticalityRepresentation": {
+            "#": "withoutIcon"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          }
+        }
+      ],
+      "@UI.identification": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "ID",
+          "Value": {
+            "=": "id"
+          }
+        }
+      ],
+      "@UI.Facets": [
+        {
+          "$Type": "UI.CollectionFacet",
+          "ID": "salesOrderData",
+          "Label": "Informacao do Cabeçalho do Pedido",
+          "Facets": [
+            {
+              "ID": "header",
+              "$Type": "UI.ReferenceFacet",
+              "Target": "@UI.FieldGroup#General"
+            }
+          ]
+        },
+        {
+          "$Type": "UI.ReferenceFacet",
+          "ID": "costumerData",
+          "Label": "Informacao do Cliente",
+          "Target": "customers/@UI.FieldGroup#CustomerData"
+        },
+        {
+          "$Type": "UI.ReferenceFacet",
+          "ID": "ItemsData",
+          "Label": "Items do Pedido",
+          "Target": "items/@UI.LineItem"
+        }
+      ],
+      "@UI.FieldGroup#General.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "ID",
+          "Value": {
+            "=": "id"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Total Amount",
+          "Value": {
+            "=": "totalamount"
+          }
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.SalesOrderHeaders"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@title": "Data de Criação",
+          "@UI.HiddenFilter": false,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "@title": "Ordem ID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "customers": {
+          "@title": "Cliente ID",
+          "@Common.Label": "Cliente",
+          "@Common.TextArrangement": {
+            "#": "TextOnly"
+          },
+          "@Common.ValueList.$Type": "Common.ValueListType",
+          "@Common.ValueList.CollectionPath": "customers",
+          "@Common.ValueList.Parameters": [
+            {
+              "$Type": "Common.ValueListParameterInOut",
+              "ValueListProperty": "id",
+              "LocalDataProperty": "customer_id"
+            },
+            {
+              "$Type": "Common.ValueListParameterDisplayOnly",
+              "ValueListProperty": "firstName"
+            },
+            {
+              "$Type": "Common.ValueListParameterDisplayOnly",
+              "ValueListProperty": "email"
+            }
+          ],
+          "type": "cds.Association",
+          "target": "SalesOrderService.customers",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "@title": "Status",
+          "@Common.Label": "status",
+          "@Common.Text": {
+            "=": "status.description"
+          },
+          "@Common.TextArrangement": {
+            "#": "TextOnly"
+          },
+          "@Common.ValueListWithFixedValues": true,
+          "@Common.ValueList.$Type": "Common.ValueListType",
+          "@Common.ValueList.CollectionPath": "SalesOrderStatuses",
+          "@Common.ValueList.Parameters": [
+            {
+              "$Type": "Common.ValueListParameterInOut",
+              "ValueListProperty": "id",
+              "LocalDataProperty": "status_id"
+            }
+          ],
+          "type": "cds.Association",
+          "target": "SalesOrderService.SalesOrderStatuses",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "totalamount": {
+          "@title": "Total Amount Title",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "items": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "SalesOrderService.SalesOrderItems",
+          "on": [
+            {
+              "ref": [
+                "items",
+                "hearder"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      },
+      "actions": {
+        "cloneSalesOrder": {
+          "kind": "action",
+          "@restrict": [
+            {
+              "grant": "*",
+              "to": "admin"
+            }
+          ],
+          "returns": {
+            "type": "db.types.bulkCreateSalesOrders.Payload"
+          }
+        }
+      }
+    },
+    "SalesOrderService.customers": {
+      "kind": "entity",
+      "@UI.FieldGroup#CustomerData.$Type": "UI.FieldGroupType",
+      "@UI.FieldGroup#CustomerData.Data": [
+        {
+          "$Type": "UI.DataField",
+          "Label": "Cliente",
+          "Value": {
+            "=": "id"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Nome",
+          "Value": {
+            "=": "firstName"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "E-mail",
+          "Value": {
+            "=": "email"
+          }
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.customers"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "@title": "Customer ID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "firstName": {
+          "@title": "Name",
+          "type": "cds.String"
+        },
+        "email": {
+          "@title": "E-mail",
+          "type": "cds.String"
+        },
+        "salesOrders": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "SalesOrderService.SalesOrdersHeaders",
+          "on": [
+            {
+              "ref": [
+                "salesOrders",
+                "customers"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      },
+      "actions": {
+        "getSalesReportByCustomerId": {
+          "kind": "function",
+          "@restrict": [
+            {
+              "grant": [
+                "READ"
+              ],
+              "TO": "authenticated-user"
+            }
+          ],
+          "returns": {
+            "items": {
+              "type": "db.types.salesReport.ExpectedResult"
+            }
+          }
+        }
+      }
+    },
+    "SalesOrderService.products": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.products"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "name": {
+          "@title": "Produto",
+          "type": "cds.String"
+        },
+        "price": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "stock": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "SalesOrderService.SalesOrderLog": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.SalesOrderLog"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "header": {
+          "type": "cds.Association",
+          "target": "SalesOrderService.SalesOrdersHeaders",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "userData": {
+          "type": "cds.LargeString"
+        },
+        "orderData": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "SalesOrderService.SalesOrderStatuses": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.SalesOrderStatuses"
+          ]
+        }
+      },
+      "elements": {
+        "id": {
+          "@Common.Text": {
+            "=": "description"
+          },
+          "@Common.TextArrangement": {
+            "#": "TextOnly"
+          },
+          "key": true,
+          "type": "cds.String",
+          "enum": {
+            "COMPLETED": {
+              "val": "COMPLETED"
+            },
+            "PENDING": {
+              "val": "PENDING"
+            },
+            "REJECTED": {
+              "val": "REJECTED"
+            }
+          }
+        },
+        "description": {
+          "localized": true,
+          "type": "cds.String"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "SalesOrderService.SalesOrderStatuses.texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "id"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "SalesOrderService.SalesOrderStatuses.texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "id"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "id"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "SalesOrderService.getSalesReportByDays": {
+      "kind": "function",
+      "params": {
+        "days": {
+          "type": {
+            "ref": [
+              "db.types.salesReport.Params",
+              "days"
+            ]
+          }
+        }
+      },
+      "returns": {
+        "items": {
+          "type": "db.types.salesReport.ExpectedResult"
+        }
+      }
+    },
+    "SalesOrderService.bulkCreateSalesOrders": {
+      "kind": "action",
+      "params": {
+        "payload": {
+          "items": {
+            "type": "db.types.bulkCreateSalesOrders.Payload"
+          }
+        }
+      },
+      "returns": {
+        "items": {
+          "type": "db.types.bulkCreateSalesOrders.ExpectedResult"
+        }
+      }
+    },
+    "db.types.salesReport.Params": {
+      "kind": "type",
+      "elements": {
+        "days": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "db.types.salesReport.ExpectedResult": {
+      "kind": "type",
+      "elements": {
+        "salesOrderId": {
+          "type": {
+            "ref": [
+              "sales.SalesOrderHeaders",
+              "id"
+            ]
+          }
+        },
+        "salesOrderTotalAmount": {
+          "type": {
+            "ref": [
+              "sales.SalesOrderHeaders",
+              "totalamount"
+            ]
+          },
+          "precision": 15,
+          "scale": 2
+        },
+        "customerId": {
+          "type": {
+            "ref": [
+              "sales.customers",
+              "id"
+            ]
+          }
+        },
+        "customerFullName": {
+          "type": "cds.String",
+          "length": 120
+        }
+      }
+    },
+    "db.types.bulkCreateSalesOrders.Payload": {
+      "kind": "type",
+      "elements": {
+        "customerId": {
+          "type": {
+            "ref": [
+              "sales.customers",
+              "id"
+            ]
+          }
+        },
+        "items": {
+          "items": {
+            "type": "db.types.bulkCreateSalesOrders.ItemsPayload"
+          }
+        }
+      }
+    },
+    "db.types.bulkCreateSalesOrders.ItemsPayload": {
+      "kind": "type",
+      "elements": {
+        "productId": {
+          "type": {
+            "ref": [
+              "sales.products",
+              "id"
+            ]
+          }
+        },
+        "quantity": {
+          "type": {
+            "ref": [
+              "sales.SalesOrderItems",
+              "quantity"
+            ]
+          }
+        },
+        "price": {
+          "type": {
+            "ref": [
+              "sales.SalesOrderItems",
+              "price"
+            ]
+          },
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "db.types.bulkCreateSalesOrders.ExpectedResult": {
+      "kind": "type",
+      "elements": {
+        "success": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "sales.SalesOrderStatuses.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "id": {
+          "@odata.containment.ignore": true,
+          "key": true,
+          "type": "cds.String",
+          "enum": {
+            "COMPLETED": {
+              "val": "COMPLETED"
+            },
+            "PENDING": {
+              "val": "PENDING"
+            },
+            "REJECTED": {
+              "val": "REJECTED"
+            }
+          }
+        },
+        "description": {
+          "localized": null,
+          "type": "cds.String"
+        }
+      }
+    },
+    "sap.common.Languages.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        }
+      }
+    },
+    "sap.common.Countries.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CountryCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Currencies.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CurrencyCode}",
+          "@Common.Text": {
+            "=": "name"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Timezones.texts": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "includes": [
+        "sap.common.TextsAspect"
+      ],
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": null,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>TimeZoneCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    },
+    "SalesOrderService.SalesOrderItems": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "@UI.LineItem": [
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "id"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "18%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Value": {
+            "=": "price"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "10%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Produto",
+          "Value": {
+            "=": "product"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "10%"
+          }
+        },
+        {
+          "$Type": "UI.DataField",
+          "Label": "Quantidade",
+          "Value": {
+            "=": "quantity"
+          },
+          "@HTML5.CssDefaults": {
+            "$Type": "HTML5.CssDefaultsType",
+            "width": "9%"
+          }
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.SalesOrderItems"
+          ]
+        }
+      },
+      "elements": {
+        "createdAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@Core.Immutable": true,
+          "@title": "{i18n>CreatedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedAt}",
+          "@readonly": true,
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@UI.HiddenFilter": true,
+          "@UI.ExcludeFromNavigationContext": true,
+          "@title": "{i18n>ChangedBy}",
+          "@readonly": true,
+          "@description": "{i18n>UserID.Description}",
+          "type": "User",
+          "length": 255
+        },
+        "id": {
+          "@title": "Item ID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "hearder": {
+          "@UI.Hidden": true,
+          "type": "cds.Association",
+          "target": "SalesOrderService.SalesOrdersHeaders",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "products": {
+          "@UI.HiddenFilter": true,
+          "@UI.Hidden": true,
+          "type": "cds.Association",
+          "target": "SalesOrderService.products",
+          "keys": [
+            {
+              "ref": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "product": {
+          "type": "cds.String"
+        },
+        "quantity": {
+          "@title": "QTD",
+          "type": "cds.Integer"
+        },
+        "price": {
+          "@title": "Preço",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "SalesOrderService.SalesOrderStatuses.texts": {
+      "kind": "entity",
+      "@cds.autoexposed": true,
+      "@odata.draft.enabled": false,
+      "projection": {
+        "from": {
+          "ref": [
+            "sales.SalesOrderStatuses.texts"
+          ]
+        }
+      },
+      "elements": {
+        "locale": {
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "sap.common.Locale",
+          "length": 14
+        },
+        "id": {
+          "@odata.containment.ignore": true,
+          "key": true,
+          "type": "cds.String",
+          "enum": {
+            "COMPLETED": {
+              "val": "COMPLETED"
+            },
+            "PENDING": {
+              "val": "PENDING"
+            },
+            "REJECTED": {
+              "val": "REJECTED"
+            }
+          }
+        },
+        "description": {
+          "localized": null,
+          "type": "cds.String"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v6.9.3",
+    "compilerVersion": "6.9.3",
+    "compilerCsnFlavor": "inferred",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

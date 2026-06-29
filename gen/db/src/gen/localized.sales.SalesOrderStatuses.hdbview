@@ -1,0 +1,4 @@
+VIEW localized_sales_SalesOrderStatuses AS SELECT
+  L_0.id,
+  coalesce(localized_1.description, L_0.description) AS description
+FROM (sales_SalesOrderStatuses AS L_0 LEFT JOIN sales_SalesOrderStatuses_texts AS localized_1 ON localized_1.id = L_0.id AND localized_1.locale = SESSION_CONTEXT('LOCALE'))

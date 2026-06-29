@@ -1,0 +1,47 @@
+{
+  "[development]": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "impl": "@cap-js/sqlite",
+        "credentials": {
+          "url": ":memory:"
+        }
+      },
+      "auth": {
+        "kind": "basic",
+        "users": {
+          "admin": {
+            "password": "cuka",
+            "roles": ["admin"],
+            "attr": {
+              "id": "1",
+              "groups": ["g1", "g2"]
+            }
+          },
+          "psiu": {
+            "password": "cuka",
+            "roles": ["read only"],
+            "attr": {
+              "id": "1",
+              "groups": ["g1", "g2"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "[production]":{
+      "requires": {
+        "db": {
+          "kind": "hana"
+        },
+        "uaa": {
+          "kind": "xsuaa"
+        }
+      },
+      "hana": {
+         "deploy-format": "hdbtable"
+      }
+  }
+}

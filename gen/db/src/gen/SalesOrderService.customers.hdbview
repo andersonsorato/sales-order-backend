@@ -1,0 +1,9 @@
+VIEW SalesOrderService_customers AS SELECT
+  customers_0.createdAt,
+  customers_0.createdBy,
+  customers_0.modifiedAt,
+  customers_0.modifiedBy,
+  customers_0.id,
+  customers_0.firstName,
+  customers_0.email
+FROM sales_customers AS customers_0

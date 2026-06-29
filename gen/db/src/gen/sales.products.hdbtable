@@ -1,0 +1,11 @@
+COLUMN TABLE sales_products (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  id NVARCHAR(36) NOT NULL,
+  name NVARCHAR(5000),
+  price DECIMAL(15, 2),
+  stock INTEGER,
+  PRIMARY KEY(id)
+)

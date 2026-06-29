@@ -1,0 +1,6 @@
+COLUMN TABLE sales_SalesOrderStatuses_texts (
+  locale NVARCHAR(14) NOT NULL,
+  id NVARCHAR(5000) NOT NULL,
+  description NVARCHAR(5000),
+  PRIMARY KEY(locale, id)
+)

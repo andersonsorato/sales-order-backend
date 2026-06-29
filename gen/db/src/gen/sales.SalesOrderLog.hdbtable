@@ -1,0 +1,11 @@
+COLUMN TABLE sales_SalesOrderLog (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  id NVARCHAR(36) NOT NULL,
+  header_id NVARCHAR(36),
+  userData NCLOB,
+  orderData NCLOB,
+  PRIMARY KEY(id)
+)

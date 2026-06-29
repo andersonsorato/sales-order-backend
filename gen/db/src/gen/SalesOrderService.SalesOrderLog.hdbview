@@ -1,0 +1,10 @@
+VIEW SalesOrderService_SalesOrderLog AS SELECT
+  SalesOrderLog_0.createdAt,
+  SalesOrderLog_0.createdBy,
+  SalesOrderLog_0.modifiedAt,
+  SalesOrderLog_0.modifiedBy,
+  SalesOrderLog_0.id,
+  SalesOrderLog_0.header_id,
+  SalesOrderLog_0.userData,
+  SalesOrderLog_0.orderData
+FROM sales_SalesOrderLog AS SalesOrderLog_0

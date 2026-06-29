@@ -1,0 +1,13 @@
+COLUMN TABLE sales_SalesOrderItems (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  id NVARCHAR(36) NOT NULL,
+  hearder_id NVARCHAR(36),
+  products_id NVARCHAR(36),
+  "PRODUCT" NVARCHAR(5000),
+  quantity INTEGER,
+  price DECIMAL(15, 2),
+  PRIMARY KEY(id)
+)

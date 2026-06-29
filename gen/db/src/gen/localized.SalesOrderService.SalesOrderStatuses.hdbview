@@ -1,0 +1,4 @@
+VIEW localized_SalesOrderService_SalesOrderStatuses AS SELECT
+  SalesOrderStatuses_0.id,
+  SalesOrderStatuses_0.description
+FROM localized_sales_SalesOrderStatuses AS SalesOrderStatuses_0

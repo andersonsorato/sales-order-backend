@@ -1,0 +1,5 @@
+VIEW SalesOrderService_SalesOrderStatuses_texts AS SELECT
+  texts_0.locale,
+  texts_0.id,
+  texts_0.description
+FROM sales_SalesOrderStatuses_texts AS texts_0

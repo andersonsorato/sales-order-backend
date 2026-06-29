@@ -1,0 +1,12 @@
+VIEW SalesOrderService_SalesOrderItems AS SELECT
+  SalesOrderItems_0.createdAt,
+  SalesOrderItems_0.createdBy,
+  SalesOrderItems_0.modifiedAt,
+  SalesOrderItems_0.modifiedBy,
+  SalesOrderItems_0.id,
+  SalesOrderItems_0.hearder_id,
+  SalesOrderItems_0.products_id,
+  SalesOrderItems_0."PRODUCT",
+  SalesOrderItems_0.quantity,
+  SalesOrderItems_0.price
+FROM sales_SalesOrderItems AS SalesOrderItems_0

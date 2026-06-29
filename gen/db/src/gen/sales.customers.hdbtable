@@ -1,0 +1,10 @@
+COLUMN TABLE sales_customers (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  id NVARCHAR(36) NOT NULL,
+  firstName NVARCHAR(5000),
+  email NVARCHAR(5000),
+  PRIMARY KEY(id)
+)
