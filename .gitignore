@@ -1,19 +1,27 @@
 node_modules/
 target/
-_out/
-gen/
 
-.cdsrc-private.json
-default-*.json
-*.sqlite
+# Web IDE, App studio
+
+.che/
+.gen/
 
 # MTA
-mta_archives/
 *_mta_build_tmp
 *.mtar
+mta_archives/
 
-# Other
-.DS_Store
+#other
+.DS_store
+*.orig
+*.log
 
-# @cap-js/cds-typer
+*.iml
+*.flattened-pom.xml
+
+#@cap-js/cds-typer
 @cds-models
+dist
+Makefile*
+coverage
+
