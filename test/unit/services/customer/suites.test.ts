@@ -35,7 +35,7 @@ const getCustomersFullEmail = (): customers => [
 const getCustomersWithlEmailWithoutAt = (): customers => [
     {
         id,
-        firstName: 'joazinho',
+        firstName: 'joaozinho',
         email: 'jaozinhosilva',
     },
 ];
@@ -65,7 +65,7 @@ describe('CostumerServiceImpl test cases', () => {
     it('should test if afterRead changes the email if an email without at is provided', () => {
         const { sut } = makeSut();
         const customers = getCustomersWithlEmailWithoutAt();
-        const expectedResult: customers = [{ id, firstName: 'anderson', email: 'jaozinhosilva@defaultdomain.com' }];
+        const expectedResult: customers = [{ id, firstName: 'joaozinho', email: 'jaozinhosilva@defaultdomain.com' }];
         const result = sut.afterRead(customers);
         expect(result.value).toEqual(expectedResult);
     });
